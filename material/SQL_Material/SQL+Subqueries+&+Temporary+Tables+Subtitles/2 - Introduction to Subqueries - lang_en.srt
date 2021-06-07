@@ -1,0 +1,28 @@
+1
+00:00:00,000 --> 00:00:04,394
+Some queries, also known as inner queries or nested queries,
+
+2
+00:00:04,394 --> 00:00:08,099
+are a tool for performing operations in multiple steps.
+
+3
+00:00:08,099 --> 00:00:11,969
+For example, let's put our marketing manager hats back on.
+
+4
+00:00:11,970 --> 00:00:13,890
+We'd like to know which channels send
+
+5
+00:00:13,890 --> 00:00:17,880
+the most traffic per day on average to Patch and Posey.
+
+6
+00:00:17,879 --> 00:00:22,884
+In order to do that, we'll need to aggregate events by channel by day,
+
+7
+00:00:22,885 --> 00:00:26,820
+then we need to take those and average them.
+

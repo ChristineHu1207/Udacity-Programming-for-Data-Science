@@ -1,0 +1,117 @@
+1
+00:00:00,501 --> 00:00:03,167
+Como gerente de operação de vendas
+na Parch & Posey,
+
+2
+00:00:03,200 --> 00:00:06,968
+classificar pedidos em grupos gerais
+é um exercício útil.
+
+3
+00:00:07,000 --> 00:00:09,901
+Mas é muito mais útil se você puder
+contar todos os pedidos
+
+4
+00:00:09,934 --> 00:00:11,767
+de cada grupo.
+
+5
+00:00:11,801 --> 00:00:13,968
+Agregar baseando-se
+nessas novas categorias
+
+6
+00:00:14,000 --> 00:00:16,634
+torna mais fácil dar feedbacks
+aos líderes da empresa
+
+7
+00:00:16,667 --> 00:00:18,534
+e tomar atitudes.
+
+8
+00:00:18,567 --> 00:00:21,400
+A forma mais fácil de contar
+todos os membros de um grupo
+
+9
+00:00:21,434 --> 00:00:25,033
+é criar uma coluna que os agrupe
+da forma que você quer.
+
+10
+00:00:25,067 --> 00:00:28,801
+E criar outra coluna
+para contar aquele grupo.
+
+11
+00:00:28,834 --> 00:00:31,734
+Aqui estamos usando "case"
+para agrupar pedidos
+
+12
+00:00:31,767 --> 00:00:35,501
+cuja quantidade total vendida
+é maior que 500
+
+13
+00:00:35,534 --> 00:00:38,501
+e aqueles com 500 ou menos.
+
+14
+00:00:38,534 --> 00:00:41,267
+Esta consulta é um lugar excelente
+para usar números
+
+15
+00:00:41,300 --> 00:00:44,234
+em vez de um cálculo de coluna
+inteira na cláusula "group by",
+
+16
+00:00:44,267 --> 00:00:46,934
+porque repetir a declaração "case"
+em "group by"
+
+17
+00:00:46,968 --> 00:00:49,100
+tornaria a consulta
+desagradavelmente longa.
+
+18
+00:00:49,133 --> 00:00:52,467
+Você pode pensar: "Por que
+eu não uso uma cláusula 'where'
+
+19
+00:00:52,501 --> 00:00:55,300
+para retirar linhas
+que não quero contar?"
+
+20
+00:00:55,334 --> 00:00:58,267
+Você pode fazer isso,
+e ficaria assim.
+
+21
+00:01:10,200 --> 00:01:12,334
+Infelizmente,
+usar a cláusula "where"
+
+22
+00:01:12,367 --> 00:01:14,834
+só permite contar
+uma condição por vez.
+
+23
+00:01:14,868 --> 00:01:17,634
+Isso seria tedioso se tivéssemos
+vários casos diferentes.
+
+24
+00:01:17,667 --> 00:01:20,100
+Precisaríamos de uma consulta
+diferente para cada.
+

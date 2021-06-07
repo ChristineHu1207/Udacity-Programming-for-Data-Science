@@ -1,0 +1,216 @@
+1
+00:00:01,471 --> 00:00:03,968
+Vamos começar analisando
+este conjunto de dados.
+
+2
+00:00:04,002 --> 00:00:06,467
+É uma lista de indicações
+para a Parch & Posey.
+
+3
+00:00:06,501 --> 00:00:09,300
+Potenciais clientes cujos negócios
+ela pode tentar ganhar.
+
+4
+00:00:09,934 --> 00:00:13,367
+Tenha em mente que isso não é
+informação real pessoal de ninguém.
+
+5
+00:00:13,401 --> 00:00:15,968
+Isso foi gerado aleatoriamente
+para esta lição.
+
+6
+00:00:17,467 --> 00:00:19,434
+Nosso objetivo aqui é limpar
+esse conjunto de dados,
+
+7
+00:00:19,468 --> 00:00:21,434
+para torná-lo mais útil
+para análise.
+
+8
+00:00:22,133 --> 00:00:23,300
+Para campos de texto,
+
+9
+00:00:23,334 --> 00:00:26,834
+isso significa criar grupos limpos
+que serão úteis para agrupar.
+
+10
+00:00:27,767 --> 00:00:30,667
+Vamos começar extraindo o código
+de área do número de telefone.
+
+11
+00:00:31,300 --> 00:00:32,934
+Como a estrutura
+de um número de telefone
+
+12
+00:00:32,968 --> 00:00:35,067
+neste conjunto de dados
+é sempre a mesma,
+
+13
+00:00:35,101 --> 00:00:37,133
+podemos usar isso
+a nosso favor.
+
+14
+00:00:37,501 --> 00:00:40,067
+O código de área é sempre
+os três primeiros caracteres
+
+15
+00:00:40,100 --> 00:00:41,200
+de um número de telefone.
+
+16
+00:00:41,234 --> 00:00:43,601
+Podemos conseguir isso
+usando a função "left".
+
+17
+00:00:45,901 --> 00:00:48,767
+Você pode usar "left" para extrair
+determinado número de caracteres
+
+18
+00:00:48,801 --> 00:00:50,167
+do lado esquerdo da string
+
+19
+00:00:50,201 --> 00:00:52,434
+e apresentá-los
+como uma string distinta.
+
+20
+00:00:53,000 --> 00:00:54,534
+Se queremos apenas
+o número do telefone,
+
+21
+00:00:54,568 --> 00:00:57,001
+podemos usar "right",
+que faz a mesma coisa,
+
+22
+00:00:57,035 --> 00:00:58,367
+mas do lado direito.
+
+23
+00:00:58,401 --> 00:00:59,868
+"Right" funciona bem
+neste caso,
+
+24
+00:00:59,902 --> 00:01:01,968
+porque sabemos
+que o número de caracteres
+
+25
+00:01:02,002 --> 00:01:04,868
+será consistente em todo o campo
+do número de telefone.
+
+26
+00:01:05,167 --> 00:01:06,534
+Se não fosse consistente,
+
+27
+00:01:06,568 --> 00:01:09,334
+ainda seria possível extrair
+uma string do lado direito,
+
+28
+00:01:09,368 --> 00:01:10,734
+de forma que faça sentido.
+
+29
+00:01:11,400 --> 00:01:14,100
+A função "lenght" retorna
+o comprimento da string.
+
+30
+00:01:14,134 --> 00:01:16,767
+Assim o comprimento
+do número de telefone
+
+31
+00:01:17,001 --> 00:01:20,100
+sempre retornará "12"
+neste conjunto de dados.
+
+32
+00:01:20,767 --> 00:01:24,167
+Sabemos que os três primeiros
+caracteres serão o código de área,
+
+33
+00:01:24,367 --> 00:01:27,834
+e eles serão seguidos por um traço.
+Então, total de 4 caracteres.
+
+34
+00:01:28,100 --> 00:01:30,200
+Poderíamos representar
+a função "right"
+
+35
+00:01:30,767 --> 00:01:33,634
+como uma função "lenght".
+
+36
+00:01:42,100 --> 00:01:43,200
+Como você pode ver,
+
+37
+00:01:43,234 --> 00:01:45,367
+os resultados no campo
+"phone_number_alt"
+
+38
+00:01:45,401 --> 00:01:48,834
+são os mesmos do resultado
+do campo "phone number".
+
+39
+00:01:49,868 --> 00:01:54,200
+Isso ocorre porque o comprimento
+do número de telefone menos quatro
+
+40
+00:01:54,801 --> 00:02:00,400
+será resolvido
+como 12 menos 4 ou 8.
+
+41
+00:02:00,434 --> 00:02:03,934
+Que é o mesmo que chamar
+só o número de telefone.
+
+42
+00:02:05,501 --> 00:02:07,400
+Ao usar funções
+dentro de outras funções,
+
+43
+00:02:07,434 --> 00:02:10,133
+é importante lembrar
+que as funções mais internas
+
+44
+00:02:10,167 --> 00:02:11,534
+serão avaliadas primeiro,
+
+45
+00:02:11,568 --> 00:02:13,634
+seguidas pelas funções
+que as encapsulam.
+

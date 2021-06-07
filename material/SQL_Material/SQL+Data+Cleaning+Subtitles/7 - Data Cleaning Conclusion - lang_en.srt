@@ -1,0 +1,20 @@
+1
+00:00:00,210 --> 00:00:04,405
+In this lesson, you learned how to clean messy data.
+
+2
+00:00:04,405 --> 00:00:09,089
+Sequel actually makes it easier than many other tools to do this at scale.
+
+3
+00:00:09,089 --> 00:00:11,615
+Cleaning data is a necessary evil.
+
+4
+00:00:11,615 --> 00:00:15,250
+And now, you have a number of skills that can help you clean data faster.
+
+5
+00:00:15,250 --> 00:00:19,000
+So that you can get on to the most impactful parts of your analysis.
+

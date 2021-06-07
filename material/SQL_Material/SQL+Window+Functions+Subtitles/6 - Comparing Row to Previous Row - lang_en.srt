@@ -1,0 +1,84 @@
+1
+00:00:00,000 --> 00:00:05,115
+It can often be useful to compare rows to preceding or following rows,
+
+2
+00:00:05,115 --> 00:00:08,520
+especially if you've got the data in order that makes sense.
+
+3
+00:00:08,520 --> 00:00:11,130
+In this case, we're going to look at
+
+4
+00:00:11,130 --> 00:00:15,390
+how much standard paper each account has purchased over all time.
+
+5
+00:00:15,390 --> 00:00:18,140
+We can see this in our inner query.
+
+6
+00:00:18,140 --> 00:00:26,460
+Now, let's use LAG and LEAD to create columns that pull values from other rows.
+
+7
+00:00:26,460 --> 00:00:29,000
+The syntax describes which column to pull
+
+8
+00:00:29,000 --> 00:00:32,630
+from and how many rows away you'd like to do the pull.
+
+9
+00:00:32,630 --> 00:00:35,375
+LAG pulls from the previous rows,
+
+10
+00:00:35,375 --> 00:00:38,405
+and LEAD pulls from the following rows.
+
+11
+00:00:38,405 --> 00:00:41,995
+As you can see, the first row of the LAG column is null
+
+12
+00:00:41,995 --> 00:00:45,640
+because there are no previous rows from which to pull.
+
+13
+00:00:45,640 --> 00:00:49,350
+LAG value of the second column is zero.
+
+14
+00:00:49,350 --> 00:00:53,915
+It's pulling from the standard sum value in the prior column.
+
+15
+00:00:53,915 --> 00:00:56,945
+This continues down through the rest of the data set.
+
+16
+00:00:56,945 --> 00:00:59,860
+The LEAD column goes in the opposite direction.
+
+17
+00:00:59,860 --> 00:01:06,640
+This can be especially useful for calculating differences between two rows.
+
+18
+00:01:50,050 --> 00:01:53,844
+You can see that these new columns,
+
+19
+00:01:53,844 --> 00:01:58,470
+now compare the standard sum to the prior and following rows.
+
+20
+00:01:58,470 --> 00:02:07,095
+LAG difference shows the difference between the current row and the prior row.
+
+21
+00:02:07,095 --> 00:02:12,000
+LEAD difference shows the difference between the current row and the next row.
+

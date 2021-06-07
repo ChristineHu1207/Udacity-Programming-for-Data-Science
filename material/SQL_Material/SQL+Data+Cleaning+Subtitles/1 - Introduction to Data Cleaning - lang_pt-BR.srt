@@ -1,0 +1,54 @@
+1
+00:00:00,901 --> 00:00:04,567
+Muitas vezes os dados não estão
+estruturados como você gostaria.
+
+2
+00:00:05,067 --> 00:00:06,234
+Em algumas lições,
+
+3
+00:00:06,268 --> 00:00:08,200
+você trabalhou
+com a tabela de eventos da web,
+
+4
+00:00:08,234 --> 00:00:11,934
+que contém uma URL de referência
+que está bem bagunçada.
+
+5
+00:00:12,567 --> 00:00:14,968
+Nesta lição, você aprenderá
+uma série de técnicas
+
+6
+00:00:15,002 --> 00:00:17,601
+para limpeza e reorganização
+de dados bagunçados,
+
+7
+00:00:17,635 --> 00:00:20,067
+para agrupá-los
+da maneira que quiser.
+
+8
+00:00:20,367 --> 00:00:22,868
+Também aprenderá a mudar
+o tipo de dado das colunas
+
+9
+00:00:22,902 --> 00:00:25,501
+e alguns truques
+sobre manipular nulos.
+
+10
+00:00:26,000 --> 00:00:28,968
+Com isso, terá um
+conjunto robusto de ferramentas
+
+11
+00:00:29,002 --> 00:00:32,300
+para transformar dados brutos
+em algo muito útil para análise.
+

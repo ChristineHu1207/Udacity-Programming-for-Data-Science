@@ -1,0 +1,56 @@
+1
+00:00:00,000 --> 00:00:02,880
+The NTILE function allows you to see the percentile
+
+2
+00:00:02,880 --> 00:00:05,925
+or any other subdivision that a given row falls into.
+
+3
+00:00:05,925 --> 00:00:07,230
+As you can see here,
+
+4
+00:00:07,230 --> 00:00:09,690
+the number specified in the NTILE function is
+
+5
+00:00:09,690 --> 00:00:12,955
+the number of parts into which you'll divide the window.
+
+6
+00:00:12,955 --> 00:00:15,110
+One hundred means percentiles,
+
+7
+00:00:15,110 --> 00:00:18,715
+five means quintiles, and four means quartiles.
+
+8
+00:00:18,715 --> 00:00:23,760
+In this case, order by determines which column to use to determine the quartiles,
+
+9
+00:00:23,760 --> 00:00:26,640
+here using standard quantity.
+
+10
+00:00:26,640 --> 00:00:33,180
+For each row, the NTILE four function will look at the value of standard quantity in
+
+11
+00:00:33,180 --> 00:00:35,790
+that row compared to all the other rows in
+
+12
+00:00:35,790 --> 00:00:40,435
+the window and then print the quartile that the value falls into.
+
+13
+00:00:40,435 --> 00:00:43,960
+So, a standard quantity of zero would fall in the first quartile,
+
+14
+00:00:43,960 --> 00:00:47,580
+while the highest value would fall in the fourth quartile.
+

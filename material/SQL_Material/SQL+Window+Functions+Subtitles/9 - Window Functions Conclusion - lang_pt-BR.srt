@@ -1,0 +1,30 @@
+1
+00:00:00,968 --> 00:00:03,467
+Nesta aula,
+vimos como criar janelas
+
+2
+00:00:03,534 --> 00:00:07,334
+e utilizar funções de janela
+para análises avançadas.
+
+3
+00:00:07,367 --> 00:00:09,868
+É preciso prática
+para dominar o assunto,
+
+4
+00:00:09,934 --> 00:00:13,133
+mas isso pode ser muito útil,
+como vimos.
+
+5
+00:00:13,167 --> 00:00:16,801
+Na próxima aula, uniremos dados
+de forma avançada
+
+6
+00:00:16,834 --> 00:00:19,868
+para situações nas quais "inner"
+e "left joint" não servem.
+

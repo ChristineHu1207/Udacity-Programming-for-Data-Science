@@ -1,0 +1,335 @@
+1
+00:00:00,501 --> 00:00:03,534
+Imagine-se como um gerente
+de marketing da Parch & Posey.
+
+2
+00:00:03,567 --> 00:00:06,234
+Você quer comparar o Facebook
+como canal de marketing,
+
+3
+00:00:06,267 --> 00:00:08,000
+com todos os outros canais.
+
+4
+00:00:08,033 --> 00:00:10,400
+O Facebook é um ótimo canal
+para o seu negócio,
+
+5
+00:00:10,434 --> 00:00:12,767
+mas é melhor que todos
+os outros combinados?
+
+6
+00:00:12,801 --> 00:00:14,367
+Vamos descobrir.
+
+7
+00:00:14,400 --> 00:00:17,601
+Para fazer isso, você precisa
+criar uma coluna "derivar",
+
+8
+00:00:17,634 --> 00:00:20,934
+que pegará dados de colunas
+existentes e os modificará.
+
+9
+00:00:20,968 --> 00:00:24,200
+Em aulas anteriores,
+fizemos isso usando Aritmética.
+
+10
+00:00:24,234 --> 00:00:26,834
+Para esse aplicativo,
+usaremos a declaração "case",
+
+11
+00:00:26,868 --> 00:00:29,934
+que é a forma do SQL lidar
+com a lógica "if" "then".
+
+12
+00:00:29,968 --> 00:00:31,534
+A declaração "case" é seguida
+
+13
+00:00:31,567 --> 00:00:35,300
+por pelo menos um par
+de declarações "when" e "then",
+
+14
+00:00:35,334 --> 00:00:38,901
+os equivalentes SQL
+de "if" e "then".
+
+15
+00:00:38,934 --> 00:00:41,501
+Deve terminar
+com a palavra "end".
+
+16
+00:00:44,701 --> 00:00:47,868
+Como se pode ver, a declaração
+"case" verifica cada linha
+
+17
+00:00:47,901 --> 00:00:53,367
+e vê se a declaração condicional
+"canais iguais ao Facebook" é real.
+
+18
+00:00:54,367 --> 00:00:57,601
+Se for, o resultado
+é o valor "sim" sendo impresso
+
+19
+00:00:57,634 --> 00:01:00,267
+na coluna "Facebook_é".
+
+20
+00:01:00,300 --> 00:01:05,767
+Se não for, o valor na coluna
+"Facebook_é" fica como "não".
+
+21
+00:01:05,801 --> 00:01:08,534
+Essa consulta facilita ver
+o que está acontecendo,
+
+22
+00:01:08,567 --> 00:01:12,200
+porque incluímos a declaração-chave
+junto com a coluna "canal".
+
+23
+00:01:12,234 --> 00:01:14,701
+Você pode verificar cada linha
+para ver se o canal
+
+24
+00:01:14,734 --> 00:01:17,767
+atende à condição
+"canais iguais ao Facebook"
+
+25
+00:01:17,801 --> 00:01:21,734
+e ver o resultado na coluna gerada
+usando a declaração-chave.
+
+26
+00:01:21,767 --> 00:01:24,000
+Agora o que queremos
+dessa consulta
+
+27
+00:01:24,033 --> 00:01:26,767
+é que ela preencha os nulos
+com a palavra "não".
+
+28
+00:01:26,801 --> 00:01:28,968
+Podemos fazer isso
+com a declaração "else",
+
+29
+00:01:29,033 --> 00:01:32,200
+que fornece meios de capturar
+valores não especificados
+
+30
+00:01:32,234 --> 00:01:34,501
+em declarações
+"when" e "then".
+
+31
+00:01:35,534 --> 00:01:38,167
+Se quisermos que a nova coluna
+acompanhe não apenas
+
+32
+00:01:38,200 --> 00:01:41,200
+nosso canal no Facebook,
+mas também o canal direto,
+
+33
+00:01:41,234 --> 00:01:44,834
+mudamos a declaração-chave
+para usar o operador "or".
+
+34
+00:01:50,100 --> 00:01:52,167
+A declaração "when"
+é uma condição lógica
+
+35
+00:01:52,200 --> 00:01:54,634
+similar a que você colocaria
+na cláusula "where",
+
+36
+00:01:54,667 --> 00:01:57,901
+então você pode usar
+"end", "like", "in"
+
+37
+00:01:57,934 --> 00:02:00,667
+ou qualquer outro operador
+que já tenha visto.
+
+38
+00:02:00,701 --> 00:02:03,767
+Imagine-se nas operações
+da Parch & Posey.
+
+39
+00:02:03,801 --> 00:02:06,267
+Você quer classificar pedidos
+em grupos gerais
+
+40
+00:02:06,300 --> 00:02:08,033
+baseando-se no tamanho deles,
+
+41
+00:02:08,067 --> 00:02:11,200
+para tornar seu planejamento
+de inventário ainda mais preciso.
+
+42
+00:02:11,234 --> 00:02:14,534
+Você pode usar uma declaração-chave
+para definir vários resultados,
+
+43
+00:02:14,567 --> 00:02:18,234
+incluindo quantas declarações
+"when" e "then" desejar.
+
+44
+00:02:20,601 --> 00:02:23,734
+Nesse exemplo, as declarações
+"when" serão avaliadas
+
+45
+00:02:23,767 --> 00:02:25,601
+na ordem
+em que estão escritas,
+
+46
+00:02:25,634 --> 00:02:29,200
+então se o valor na coluna total
+de uma certa linha for 600,
+
+47
+00:02:29,234 --> 00:02:32,667
+produzirá um resultado
+de mais de 500.
+
+48
+00:02:32,701 --> 00:02:35,968
+Se o valor
+da coluna total for 169,
+
+49
+00:02:36,000 --> 00:02:40,200
+o banco de dados primeiro vai ver
+se o total é maior que 500,
+
+50
+00:02:40,234 --> 00:02:42,767
+porque essa é a primeira
+declaração "when".
+
+51
+00:02:42,801 --> 00:02:46,734
+169 não é maior que 500,
+então passaremos à avaliação
+
+52
+00:02:46,767 --> 00:02:48,434
+do próximo "when".
+
+53
+00:02:48,467 --> 00:02:51,968
+O processo continua até
+uma declaração "when" lógica
+
+54
+00:02:52,000 --> 00:02:53,834
+ser avaliada
+como verdadeira.
+
+55
+00:02:53,868 --> 00:02:56,501
+Nesse caso, a declaração "then"
+será registrada
+
+56
+00:02:56,534 --> 00:02:59,167
+na coluna "total_grupo".
+
+57
+00:02:59,200 --> 00:03:03,601
+De 169, isso vai acontecer
+quando a declaração "when"
+
+58
+00:03:03,634 --> 00:03:06,434
+resultar em "de 101 a 300".
+
+59
+00:03:06,467 --> 00:03:07,934
+Enquanto o anterior funciona,
+
+60
+00:03:07,968 --> 00:03:11,667
+é melhor criar declarações "when"
+que não se sobreponham.
+
+61
+00:03:11,701 --> 00:03:15,133
+A declaração condicional
+"quando total é maior que 400"
+
+62
+00:03:15,167 --> 00:03:18,434
+e sobrepõe à declaração
+"quando total é maior que 300"
+
+63
+00:03:18,467 --> 00:03:22,901
+para todo valor maior que 500,
+o que é um pouco confuso.
+
+64
+00:03:22,934 --> 00:03:26,267
+Uma forma melhor de escrever isso
+seria definir grupos específicos
+
+65
+00:03:26,300 --> 00:03:28,234
+que não se sobreponham.
+
+66
+00:03:28,300 --> 00:03:31,634
+Você pode fazer isso encadeando
+múltiplas declarações condicionais
+
+67
+00:03:31,701 --> 00:03:35,601
+com "end" ou "or", da mesma forma
+que poderia em uma cláusula "where".
+
+68
+00:03:45,501 --> 00:03:48,367
+Na parte final desta aula,
+iremos além,
+
+69
+00:03:48,400 --> 00:03:53,100
+combinando essas declarações
+com agregações que vimos antes.
+

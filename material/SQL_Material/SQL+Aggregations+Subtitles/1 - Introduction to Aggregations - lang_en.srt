@@ -1,0 +1,116 @@
+1
+00:00:00,260 --> 00:00:05,214
+So far in this course, we've used SQL to join tables using left, right,
+
+2
+00:00:05,214 --> 00:00:10,580
+and inner joins, and filter the results using Where and On clauses.
+
+3
+00:00:10,580 --> 00:00:13,169
+Sometimes, it's useful to view row-level data.
+
+4
+00:00:13,169 --> 00:00:16,410
+For example, we might want to look at all the individual orders for
+
+5
+00:00:16,410 --> 00:00:20,094
+a given sales person to see how they're performing in a given month.
+
+6
+00:00:20,094 --> 00:00:22,979
+But other times, row-level data is overwhelming,
+
+7
+00:00:22,980 --> 00:00:26,370
+and ultimately, less valuable than aggregated data.
+
+8
+00:00:26,370 --> 00:00:29,310
+Counting up all the orders in each region in each month,
+
+9
+00:00:29,309 --> 00:00:33,030
+for example, will be pretty inconvenient when looking at row-level data.
+
+10
+00:00:33,030 --> 00:00:37,020
+One rep's order volume is low enough to look at individual rows,
+
+11
+00:00:37,020 --> 00:00:40,380
+but the entire region's volume is way too high.
+
+12
+00:00:40,380 --> 00:00:45,265
+Instead, a single number of orders for each month will be much better.
+
+13
+00:00:45,265 --> 00:00:49,715
+Fortunately, databases are great at aggregating data.
+
+14
+00:00:49,715 --> 00:00:51,720
+The SQL syntax is easy to learn.
+
+15
+00:00:51,719 --> 00:00:53,164
+If you're familiar with Excel,
+
+16
+00:00:53,164 --> 00:00:55,575
+SQL commands are pretty similar.
+
+17
+00:00:55,575 --> 00:00:59,745
+Count, counts how many rows are in a particular column.
+
+18
+00:00:59,744 --> 00:01:03,948
+Sum, adds together all the values in a particular column.
+
+19
+00:01:03,948 --> 00:01:08,640
+Min and Max, return the lowest and highest values in a particular column.
+
+20
+00:01:08,640 --> 00:01:14,409
+And Average, calculates the average of all the values in a particular column.
+
+21
+00:01:14,409 --> 00:01:17,784
+These functions operate down columns, not across rows.
+
+22
+00:01:17,784 --> 00:01:22,109
+So you can do things like sum up all the quantities of paper ever delivered.
+
+23
+00:01:22,109 --> 00:01:25,125
+Instead of getting results set many thousands of rows long,
+
+24
+00:01:25,125 --> 00:01:28,219
+you just get one line with the answer.
+
+25
+00:01:28,219 --> 00:01:31,120
+In practice, you'll find yourself using row-level output for
+
+26
+00:01:31,120 --> 00:01:35,370
+the early exploratory work when searching your database to better understand the data.
+
+27
+00:01:35,370 --> 00:01:37,545
+As you get a sense for what the data looks like
+
+28
+00:01:37,545 --> 00:01:39,600
+and begin to look for answers to your questions,
+
+29
+00:01:39,599 --> 00:01:42,000
+aggregates become more helpful.
+

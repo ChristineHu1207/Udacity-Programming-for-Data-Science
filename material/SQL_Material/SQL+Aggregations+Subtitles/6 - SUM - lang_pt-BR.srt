@@ -1,0 +1,72 @@
+1
+00:00:00,434 --> 00:00:03,133
+Imagine-se como um gerente
+de operações da Parch & Posey.
+
+2
+00:00:03,167 --> 00:00:05,734
+Você está tentando fazer
+um planejamento de inventário
+
+3
+00:00:05,801 --> 00:00:08,968
+e quer saber quanto de cada tipo
+de papel produzir.
+
+4
+00:00:09,000 --> 00:00:12,133
+Um bom lugar para começar
+pode ser totalizar todas as vendas
+
+5
+00:00:12,167 --> 00:00:15,067
+de cada tipo de papel
+e compará-las entre si.
+
+6
+00:00:15,100 --> 00:00:16,901
+Faremos isso usando "sum".
+
+7
+00:00:16,934 --> 00:00:18,667
+É parecido com "count",
+
+8
+00:00:18,701 --> 00:00:21,133
+exceto por você especificar
+nomes de colunas
+
+9
+00:00:21,167 --> 00:00:23,334
+em vez de usar asterisco.
+
+10
+00:00:23,367 --> 00:00:25,367
+Parece que o standard
+é mais popular
+
+11
+00:00:25,400 --> 00:00:28,534
+do que os dois tipos de papel
+não standard combinados.
+
+12
+00:00:29,400 --> 00:00:32,467
+Diferentemente de "count",
+você só pode usar a função "sum"
+
+13
+00:00:32,501 --> 00:00:35,267
+em colunas que contenham
+valores numéricos.
+
+14
+00:00:35,300 --> 00:00:37,901
+E não se preocupe
+com a presença de nulos.
+
+15
+00:00:37,934 --> 00:00:40,100
+A função "sum"
+os conta como zeros.
+

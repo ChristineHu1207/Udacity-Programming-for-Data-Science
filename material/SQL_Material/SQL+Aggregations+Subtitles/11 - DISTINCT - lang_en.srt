@@ -1,0 +1,68 @@
+1
+00:00:00,000 --> 00:00:02,640
+You can think of DISTINCT this way,
+
+2
+00:00:02,640 --> 00:00:05,280
+if you want to group by some columns but you don't
+
+3
+00:00:05,280 --> 00:00:07,830
+necessarily want to include any aggregations,
+
+4
+00:00:07,830 --> 00:00:10,085
+you can use DISTINCT instead.
+
+5
+00:00:10,085 --> 00:00:13,170
+As an example, let's revisit the count of events by
+
+6
+00:00:13,169 --> 00:00:16,664
+channel by account we looked at in the GROUP BY segment.
+
+7
+00:00:16,664 --> 00:00:20,488
+Notice the row count, 1509.
+
+8
+00:00:20,489 --> 00:00:22,574
+If we get rid of the events column,
+
+9
+00:00:22,574 --> 00:00:25,559
+you can see that the resulting query returns basically the same
+
+10
+00:00:25,559 --> 00:00:28,969
+results with the same row count.
+
+11
+00:00:28,969 --> 00:00:32,320
+And if we run that query again with DISTINCT,
+
+12
+00:00:32,320 --> 00:00:41,204
+you can see that the results are the same.
+
+13
+00:00:41,204 --> 00:00:42,987
+Of course, they don't include the COUNT
+
+14
+00:00:42,987 --> 00:00:46,009
+anymore because we've removed it from our select statement.
+
+15
+00:00:46,009 --> 00:00:48,649
+Since it's no longer in our select statement,
+
+16
+00:00:48,649 --> 00:00:51,019
+and since we're no longer doing an aggregation,
+
+17
+00:00:51,020 --> 00:00:53,000
+we don't need the GROUP BY clause either.
+

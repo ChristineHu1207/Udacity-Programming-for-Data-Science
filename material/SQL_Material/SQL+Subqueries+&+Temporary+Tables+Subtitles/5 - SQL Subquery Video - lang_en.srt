@@ -1,0 +1,440 @@
+1
+00:00:00,000 --> 00:00:03,600
+When performing subqueries, you're using a query like any
+
+2
+00:00:03,600 --> 00:00:07,520
+other of the queries that you wrote in the previous parts of this class,
+
+3
+00:00:07,520 --> 00:00:11,955
+but you're also nesting it within another query.
+
+4
+00:00:11,955 --> 00:00:16,090
+Consider we want to know the top channel used by each account.
+
+5
+00:00:16,090 --> 00:00:18,615
+How might we go about answering this question?
+
+6
+00:00:18,615 --> 00:00:22,745
+Imagine if we also want to know how often that channel was used.
+
+7
+00:00:22,745 --> 00:00:24,870
+We can break this down into a couple of
+
+8
+00:00:24,870 --> 00:00:29,480
+different tables and nest them within one another using subqueries.
+
+9
+00:00:29,480 --> 00:00:31,710
+It's really important that we first try
+
+10
+00:00:31,710 --> 00:00:34,355
+to figure out what our ending table will look like.
+
+11
+00:00:34,355 --> 00:00:36,410
+I imagine a table like this.
+
+12
+00:00:36,410 --> 00:00:40,185
+It will have one column for the account or the account ID,
+
+13
+00:00:40,185 --> 00:00:42,025
+depending on what's unique.
+
+14
+00:00:42,025 --> 00:00:46,530
+It will have the web event which is the web event that's associated with the maximum for
+
+15
+00:00:46,530 --> 00:00:52,055
+that particular account and it'll have account of how often that web event occurred.
+
+16
+00:00:52,055 --> 00:00:54,420
+You can imagine that the way that we need to get this,
+
+17
+00:00:54,420 --> 00:00:57,225
+we need to get an intermediate table first.
+
+18
+00:00:57,225 --> 00:00:59,430
+That table will have the account with
+
+19
+00:00:59,430 --> 00:01:03,720
+each event and the account of how often that event occurred.
+
+20
+00:01:03,720 --> 00:01:06,315
+That count of how often it occurred,
+
+21
+00:01:06,315 --> 00:01:08,535
+will happen for each of the web events,
+
+22
+00:01:08,535 --> 00:01:10,995
+for each of the accounts.
+
+23
+00:01:10,995 --> 00:01:14,865
+When I move from this table to our final table,
+
+24
+00:01:14,865 --> 00:01:21,145
+I will want to get the maximum and only the maximum row for each of the accounts.
+
+25
+00:01:21,145 --> 00:01:24,270
+Let's see how we can break this up using subqueries.
+
+26
+00:01:24,270 --> 00:01:26,820
+First, let's get our intermediate table.
+
+27
+00:01:26,820 --> 00:01:29,715
+To do this, we'll want to get the account,
+
+28
+00:01:29,715 --> 00:01:34,620
+the event and the count of how often that event and account occurred together.
+
+29
+00:01:34,620 --> 00:01:37,770
+Using our ERD, we can see that our account
+
+30
+00:01:37,770 --> 00:01:41,990
+ID is linked via the primary and foreign key here.
+
+31
+00:01:41,990 --> 00:01:48,095
+We want the channel and will also want to get a count of how often this channel occurred.
+
+32
+00:01:48,095 --> 00:01:50,835
+I'm going to also pull the name of the account.
+
+33
+00:01:50,835 --> 00:01:54,030
+Joining these two tables we get this.
+
+34
+00:01:54,030 --> 00:01:56,970
+Now, let's pull the ID and the name from
+
+35
+00:01:56,970 --> 00:02:01,440
+the accounts table as well as the channel from the web events table.
+
+36
+00:02:01,440 --> 00:02:03,555
+So here we can see that we have
+
+37
+00:02:03,555 --> 00:02:06,585
+a particular account and then the channel that they were using.
+
+38
+00:02:06,585 --> 00:02:09,330
+If we want to get the count of how often this occurred,
+
+39
+00:02:09,330 --> 00:02:11,445
+we'll need to ask for that up here.
+
+40
+00:02:11,445 --> 00:02:13,350
+Now on our results table,
+
+41
+00:02:13,350 --> 00:02:18,390
+you can see each account name as well as the channel and our count.
+
+42
+00:02:18,390 --> 00:02:21,675
+This is like that intermediate table we were trying to find before.
+
+43
+00:02:21,675 --> 00:02:28,060
+From here, we're going to want to get the maximum for each of these account names.
+
+44
+00:02:28,060 --> 00:02:31,015
+So notice if we scroll through this,
+
+45
+00:02:31,015 --> 00:02:33,940
+let's say to make this a little bit clearer,
+
+46
+00:02:33,940 --> 00:02:35,795
+let's say we order by the account.
+
+47
+00:02:35,795 --> 00:02:39,720
+So you'll notice that there are multiple accounts for Walmart and the one
+
+48
+00:02:39,720 --> 00:02:43,695
+that we'll want is only this 22 associated with direct.
+
+49
+00:02:43,695 --> 00:02:48,575
+And then similarly, when we go to Exxonmobil we'll only want this nine.
+
+50
+00:02:48,575 --> 00:02:52,155
+Sorry, Exxon Mobil the top one is,
+
+51
+00:02:52,155 --> 00:02:55,635
+actually for this one it really doesn't matter because they're all the same.
+
+52
+00:02:55,635 --> 00:02:58,660
+So it could just pull all of them and then similarly,
+
+53
+00:02:58,660 --> 00:03:00,415
+for or we could just have it pull one.
+
+54
+00:03:00,415 --> 00:03:02,430
+It just depends on how we want our results.
+
+55
+00:03:02,430 --> 00:03:03,825
+But if we go to Apple,
+
+56
+00:03:03,825 --> 00:03:08,055
+you'll notice that its top one was direct or Facebook,
+
+57
+00:03:08,055 --> 00:03:10,060
+and so we'll want it to pull both of those.
+
+58
+00:03:10,060 --> 00:03:12,300
+And then similarly for the UnitedHealth Group,
+
+59
+00:03:12,300 --> 00:03:16,645
+we'll want it to pull the direct of nine and similarly for some of these other ones.
+
+60
+00:03:16,645 --> 00:03:19,020
+So we've sort of created this intermediate table
+
+61
+00:03:19,020 --> 00:03:21,585
+that we were talking about before with the account,
+
+62
+00:03:21,585 --> 00:03:25,875
+the event, and then the count of how often that of account and event worked together.
+
+63
+00:03:25,875 --> 00:03:27,600
+So this query gave us that.
+
+64
+00:03:27,600 --> 00:03:31,935
+We now want to nest it into another query so that we can find
+
+65
+00:03:31,935 --> 00:03:37,185
+where this count is maximized across each of these accounts.
+
+66
+00:03:37,185 --> 00:03:39,390
+And this is where the tricky part is.
+
+67
+00:03:39,390 --> 00:03:43,110
+So you can imagine getting the max for each account Next.
+
+68
+00:03:43,110 --> 00:03:48,550
+Imagine this is our subquery table which I'm going to call it t1,
+
+69
+00:03:48,550 --> 00:03:52,170
+and let's say we just want to find the max for the account.
+
+70
+00:03:52,170 --> 00:03:54,120
+What does that give us back?
+
+71
+00:03:54,120 --> 00:03:58,240
+In order to match this to our other table, let's order it.
+
+72
+00:03:58,240 --> 00:04:03,005
+Okay, so there is our 22 or one or nine et cetera.
+
+73
+00:04:03,005 --> 00:04:06,720
+So notice we still don't have the plan with it,
+
+74
+00:04:06,720 --> 00:04:08,430
+and if we group by the plan,
+
+75
+00:04:08,430 --> 00:04:13,140
+if we were to put the channel in this statement and then get the max,
+
+76
+00:04:13,140 --> 00:04:15,185
+we're still going to get all of them back.
+
+77
+00:04:15,185 --> 00:04:16,680
+So really what we want to do,
+
+78
+00:04:16,680 --> 00:04:21,990
+is we want to match this value and this value back to our original table.
+
+79
+00:04:21,990 --> 00:04:24,960
+We want to say where those two things match,
+
+80
+00:04:24,960 --> 00:04:27,640
+we want that particular channel.
+
+81
+00:04:27,640 --> 00:04:30,210
+So notice we have these two tables,
+
+82
+00:04:30,210 --> 00:04:31,605
+one looks like this,
+
+83
+00:04:31,605 --> 00:04:35,640
+which has the maximum value and the name.
+
+84
+00:04:35,640 --> 00:04:38,760
+The other one had the account name,
+
+85
+00:04:38,760 --> 00:04:44,335
+the event, and the max value but also these other accounts.
+
+86
+00:04:44,335 --> 00:04:49,650
+So basically, if we can match these two tables together where the account name matches,
+
+87
+00:04:49,650 --> 00:04:50,925
+as well as the count,
+
+88
+00:04:50,925 --> 00:04:52,435
+is equal to the max,
+
+89
+00:04:52,435 --> 00:04:56,480
+Those are the rows that we want back in our final table.
+
+90
+00:04:56,480 --> 00:05:02,745
+So basically, if I were to join all of this,
+
+91
+00:05:02,745 --> 00:05:08,965
+okay, let's create this as another table which I'll just call t2.
+
+92
+00:05:08,965 --> 00:05:11,145
+We want to join in on t2,
+
+93
+00:05:11,145 --> 00:05:16,140
+so t2 is this table that I see right here and basically I want where this name is equal
+
+94
+00:05:16,140 --> 00:05:18,540
+to the name and the previous table as well as where
+
+95
+00:05:18,540 --> 00:05:21,290
+this number is equal to the number in the previous table.
+
+96
+00:05:21,290 --> 00:05:29,265
+So t2.id Equals t3.id
+
+97
+00:05:29,265 --> 00:05:33,780
+and just going to erase this part here.
+
+98
+00:05:33,780 --> 00:05:40,875
+t2 dot and t3.ct.
+
+99
+00:05:40,875 --> 00:05:44,315
+So we're joining those two tables together.
+
+100
+00:05:44,315 --> 00:05:48,780
+Let's see if I made an error. t3 channgle.
+
+101
+00:05:48,780 --> 00:05:51,220
+I did make an error.
+
+102
+00:05:51,220 --> 00:05:58,120
+t3 channgle does not exist.
+
+103
+00:05:58,120 --> 00:06:01,665
+Cool. And if we wanted to we could also just order by.
+
+104
+00:06:01,665 --> 00:06:07,727
+So order by, we just do it by ID.
+
+105
+00:06:07,727 --> 00:06:13,350
+Maybe we could order by t3 count too.
+
+106
+00:06:13,350 --> 00:06:16,815
+But we really should only have one of these per account
+
+107
+00:06:16,815 --> 00:06:22,560
+unless the maximum is the same for two channels for a particular account.
+
+108
+00:06:22,560 --> 00:06:26,040
+So, for Walmart, it's 22 and it's direct.
+
+109
+00:06:26,040 --> 00:06:29,795
+For ExxonMobil, it's one and it was for all of this.
+
+110
+00:06:29,795 --> 00:06:32,000
+This was the same and similarly here.
+

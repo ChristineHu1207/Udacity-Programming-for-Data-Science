@@ -1,0 +1,168 @@
+1
+00:00:00,000 --> 00:00:04,275
+By now, you might have noticed that dates are a bit hard to work with.
+
+2
+00:00:04,275 --> 00:00:05,970
+Aggregating by date fields,
+
+3
+00:00:05,969 --> 00:00:08,519
+in particular, doesn't work in a practical way.
+
+4
+00:00:08,519 --> 00:00:10,935
+It treats each time stamp is unique.
+
+5
+00:00:10,935 --> 00:00:13,634
+When it would be more practical to round to the nearest day,
+
+6
+00:00:13,634 --> 00:00:16,984
+week, or month, and aggregate across that period.
+
+7
+00:00:16,984 --> 00:00:21,789
+Take for example, this sum of standard paper quantities by time period.
+
+8
+00:00:21,789 --> 00:00:24,239
+You can see in the results here that this really
+
+9
+00:00:24,239 --> 00:00:27,224
+isn't any more useful than looking at the raw data.
+
+10
+00:00:27,225 --> 00:00:34,765
+This aggregates from six 6,912 rows in the raw data down to 6,908.
+
+11
+00:00:34,765 --> 00:00:38,005
+Almost all of the data in this table are unique.
+
+12
+00:00:38,005 --> 00:00:39,960
+Good news though, there are plenty of
+
+13
+00:00:39,960 --> 00:00:42,734
+special functions to make dates easier to work with.
+
+14
+00:00:42,734 --> 00:00:45,204
+But before we dig into date and time functions,
+
+15
+00:00:45,204 --> 00:00:47,405
+let's take a look at how dates are stored.
+
+16
+00:00:47,405 --> 00:00:49,020
+If you live in the United States,
+
+17
+00:00:49,020 --> 00:00:52,938
+you're probably used to seeing dates formatted as month-month,
+
+18
+00:00:52,938 --> 00:00:58,700
+day-day, year-year-year-year, or similar month first format.
+
+19
+00:00:58,700 --> 00:01:01,890
+It's a non-convention compared to the rest of the world's standards.
+
+20
+00:01:01,890 --> 00:01:03,990
+Check out the link in the instructor notes below to
+
+21
+00:01:03,990 --> 00:01:06,180
+see the most other places in the world follow
+
+22
+00:01:06,180 --> 00:01:11,310
+a day-day, month-month, year-year-year-year, format.
+
+23
+00:01:11,310 --> 00:01:15,180
+This isn't necessarily better or worse, it's just different.
+
+24
+00:01:15,180 --> 00:01:18,520
+Databases do it yet another way.
+
+25
+00:01:18,519 --> 00:01:21,109
+Ordering from least to most granular part of the date,
+
+26
+00:01:21,109 --> 00:01:26,084
+year-year-year-year, month-month, day-day.
+
+27
+00:01:26,084 --> 00:01:28,659
+This is a very specific utility,
+
+28
+00:01:28,659 --> 00:01:32,859
+and basis of that date sorted alphabetically are also in chronological order.
+
+29
+00:01:32,859 --> 00:01:34,700
+In other words, date ordering is the
+
+30
+00:01:34,700 --> 00:01:38,225
+same whether you think of them as dates or as bits of text.
+
+31
+00:01:38,224 --> 00:01:40,309
+With this example here,
+
+32
+00:01:40,310 --> 00:01:43,650
+we can see that the year first way the databases store dates,
+
+33
+00:01:43,650 --> 00:01:47,465
+is ideal for sorting the way we'll want to retrieve this information in the future.
+
+34
+00:01:47,465 --> 00:01:50,795
+Whether we want the most recent or oldest information,
+
+35
+00:01:50,795 --> 00:01:56,560
+day first and month first date formats sort of funny ways that don't make a ton of sense.
+
+36
+00:01:56,560 --> 00:02:02,969
+Another benefit is the date can easily be truncated in order to group them for analysis.
+
+37
+00:02:02,969 --> 00:02:11,409
+Take the date 2017- 04- 01 12:15:01.
+
+38
+00:02:11,409 --> 00:02:15,289
+If we want to group that with other events that occurred on the same day,
+
+39
+00:02:15,289 --> 00:02:17,655
+we can't do that with the date in its current format.
+
+40
+00:02:17,655 --> 00:02:21,620
+Grouping now or group by every event that occurred on April 1st,
+
+41
+00:02:21,620 --> 00:02:25,170
+at 12:15, and 1 second.
+
+42
+00:02:25,169 --> 00:02:27,000
+That won't help us very much.
+

@@ -1,0 +1,53 @@
+1
+00:00:00,968 --> 00:00:03,501
+A esta altura,
+você já aprendeu o básico.
+
+2
+00:00:04,200 --> 00:00:05,801
+Você entende a estrutura
+do banco de dados,
+
+3
+00:00:05,835 --> 00:00:08,100
+e, em geral, sabe
+como acessar informações.
+
+4
+00:00:08,501 --> 00:00:11,033
+Consegue até fazer
+algumas agregações simples.
+
+5
+00:00:11,767 --> 00:00:13,434
+Há alguns aprendizados
+
+6
+00:00:13,468 --> 00:00:16,667
+que o tornarão capaz de resolver
+qualquer problema que aparecer.
+
+7
+00:00:17,133 --> 00:00:18,233
+Nesta lição,
+
+8
+00:00:18,267 --> 00:00:21,300
+você vai aprender a consultar
+os resultados de outra consulta.
+
+9
+00:00:21,634 --> 00:00:24,868
+Isso permite que você integre
+mais transformações em sua consulta,
+
+10
+00:00:25,133 --> 00:00:26,667
+organize seu trabalho
+com facilidade
+
+11
+00:00:26,701 --> 00:00:28,701
+e agilize a execução
+de consultas.
+

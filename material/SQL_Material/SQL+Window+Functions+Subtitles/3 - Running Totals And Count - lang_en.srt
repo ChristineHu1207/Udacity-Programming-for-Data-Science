@@ -1,0 +1,128 @@
+1
+00:00:00,000 --> 00:00:04,940
+The easiest place to start using window functions is with functions that just count.
+
+2
+00:00:04,940 --> 00:00:06,975
+They don't actually aggregate.
+
+3
+00:00:06,975 --> 00:00:10,230
+Row number does just what it sounds like.
+
+4
+00:00:10,230 --> 00:00:14,400
+It displays the number of a given rows within the window you define.
+
+5
+00:00:14,400 --> 00:00:16,425
+It starts at one and numbers the rows
+
+6
+00:00:16,425 --> 00:00:20,030
+according to the order by part of the window statement.
+
+7
+00:00:20,030 --> 00:00:25,950
+Row number does not require you to specify a variable within the parentheses.
+
+8
+00:00:25,950 --> 00:00:32,685
+Here, we're ordering by the ID field which increments by 1 every row.
+
+9
+00:00:32,685 --> 00:00:38,400
+So the ID and row num fields always have the same value.
+
+10
+00:00:38,400 --> 00:00:40,365
+But if we order by occurred at,
+
+11
+00:00:40,365 --> 00:00:42,158
+the rows are ordered differently,
+
+12
+00:00:42,158 --> 00:00:46,290
+and the row num column is therefore assigned differently.
+
+13
+00:00:46,290 --> 00:00:49,680
+You can see that the row number no longer matches up with IDs.
+
+14
+00:00:49,680 --> 00:00:51,805
+Using the partitioned by clause,
+
+15
+00:00:51,805 --> 00:00:56,025
+we can start the count over at 1 again in each partition.
+
+16
+00:00:56,025 --> 00:01:00,570
+Let's partition by account ID see what this looks like.
+
+17
+00:01:00,570 --> 00:01:04,385
+This now shows us the row number within
+
+18
+00:01:04,385 --> 00:01:09,710
+each account ID where row 1 is the first order that occurred.
+
+19
+00:01:09,710 --> 00:01:11,885
+There's another function, rank,
+
+20
+00:01:11,885 --> 00:01:16,730
+that does something similar. Let's take a look.
+
+21
+00:01:18,590 --> 00:01:21,990
+While this might look the same,
+
+22
+00:01:21,990 --> 00:01:23,770
+there is a subtle difference.
+
+23
+00:01:23,770 --> 00:01:27,970
+If two lines in a row have the same value for occurred at,
+
+24
+00:01:27,970 --> 00:01:29,455
+they're given the same rank,
+
+25
+00:01:29,455 --> 00:01:33,280
+whereas row number gives them different numbers.
+
+26
+00:01:33,280 --> 00:01:38,770
+You'll notice this more if we date trunc the occurred at field by month.
+
+27
+00:01:59,480 --> 00:02:05,440
+As you can see, entries with the same month are now given the same rank,
+
+28
+00:02:05,440 --> 00:02:08,710
+and the rank column then skips some values to make up for it.
+
+29
+00:02:08,710 --> 00:02:11,325
+There's a similar function,
+
+30
+00:02:11,325 --> 00:02:16,570
+dense rank, which doesn't skip values after assigning several rows with the same rank.
+
+31
+00:02:16,570 --> 00:02:20,056
+So you have this rows skips from rank 2 to rank 4.
+
+32
+00:02:20,056 --> 00:02:23,420
+With dense rank, it goes straight from 2 to 3.
+

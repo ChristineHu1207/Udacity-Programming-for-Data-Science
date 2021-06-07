@@ -1,0 +1,206 @@
+1
+00:00:00,170 --> 00:00:04,400
+Nós já exploramos as funções "date"
+como "date trunc" e "date part".
+
+2
+00:00:05,234 --> 00:00:06,434
+Nas próximas lições,
+
+3
+00:00:06,468 --> 00:00:10,100
+vamos explorar ainda mais funções
+para obter o valor das datas.
+
+4
+00:00:10,767 --> 00:00:13,067
+A grande maioria das análises
+que você executa
+
+5
+00:00:13,101 --> 00:00:15,801
+em um ambiente profissional
+terão datas anexadas a elas,
+
+6
+00:00:15,835 --> 00:00:18,334
+mas você pode não conseguir
+obter o valor delas
+
+7
+00:00:18,368 --> 00:00:20,834
+se as datas não estiverem
+formatadas corretamente.
+
+8
+00:00:20,868 --> 00:00:22,968
+Vamos dizer que você tem
+três colunas separadas,
+
+9
+00:00:23,002 --> 00:00:25,868
+para dia, mês e ano
+de um determinado registro.
+
+10
+00:00:26,334 --> 00:00:27,467
+Problemas como esse
+são comuns
+
+11
+00:00:27,501 --> 00:00:30,100
+para dados que foram manipulados
+em algum ponto no Excel,
+
+12
+00:00:30,134 --> 00:00:32,300
+exportados
+de um sistema de terceiros
+
+13
+00:00:32,801 --> 00:00:34,968
+ou até que foram
+inseridos manualmente.
+
+14
+00:00:36,133 --> 00:00:38,067
+Para realmente maximizar
+o valor aqui,
+
+15
+00:00:38,367 --> 00:00:40,701
+você precisará converter
+os nomes dos meses em números,
+
+16
+00:00:40,735 --> 00:00:44,567
+para concatenar esses campos
+junto com hifens
+
+17
+00:00:44,601 --> 00:00:45,968
+e então informar
+o banco de dados
+
+18
+00:00:46,002 --> 00:00:48,634
+para entender
+que o resultado é uma data,
+
+19
+00:00:48,668 --> 00:00:50,734
+o que você pode fazer
+usando a função "cast".
+
+20
+00:00:50,768 --> 00:00:52,834
+Vamos abordar
+as primeiras etapas.
+
+21
+00:00:55,300 --> 00:00:58,334
+Esta primeira etapa converteu
+os nomes dos meses em números.
+
+22
+00:00:58,534 --> 00:01:02,067
+Como você pode ver,
+janeiro aparece como 1.
+
+23
+00:01:02,667 --> 00:01:06,801
+Agora vamos concatenar esse valor
+junto com o ano e o dia
+
+24
+00:01:06,835 --> 00:01:10,133
+para criar algo que pareça
+uma data de verdade.
+
+25
+00:01:16,801 --> 00:01:19,133
+Na última etapa, vamos lançar
+este novo campo
+
+26
+00:01:19,400 --> 00:01:20,901
+como um formato de data.
+
+27
+00:01:24,968 --> 00:01:26,801
+Você pode ver aqui
+que o banco de dados
+
+28
+00:01:26,835 --> 00:01:31,367
+agora entende isso como uma data
+e incluiu os zeros adequados
+
+29
+00:01:31,401 --> 00:01:34,434
+a esses registros,
+para serem lidos corretamente.
+
+30
+00:01:35,567 --> 00:01:37,834
+A função "cast" pode ser
+complicada de ler,
+
+31
+00:01:38,501 --> 00:01:40,501
+mas felizmente existe
+um atalho.
+
+32
+00:01:41,133 --> 00:01:43,701
+Em vez de encapsular tudo isso
+em uma função "cast",
+
+33
+00:01:43,735 --> 00:01:45,868
+podemos adicionar
+dois pontos duas vezes
+
+34
+00:01:45,902 --> 00:01:49,267
+e o tipo de data que gostaríamos
+de lançar no final desta seção.
+
+35
+00:01:55,100 --> 00:01:57,834
+A função "cast" é mais útil
+para transformar strings
+
+36
+00:01:57,868 --> 00:01:59,501
+em números ou datas.
+
+37
+00:01:59,535 --> 00:02:00,834
+Normalmente,
+
+38
+00:02:00,868 --> 00:02:03,300
+se você quer transformar
+um número em uma string,
+
+39
+00:02:03,334 --> 00:02:05,601
+executar qualquer tipo
+de operação na string,
+
+40
+00:02:05,635 --> 00:02:07,767
+como "left", "right"
+ou "substring",
+
+41
+00:02:07,801 --> 00:02:09,434
+lança automaticamente
+os dados
+
+42
+00:02:09,468 --> 00:02:11,133
+durante a execução
+da operação.
+

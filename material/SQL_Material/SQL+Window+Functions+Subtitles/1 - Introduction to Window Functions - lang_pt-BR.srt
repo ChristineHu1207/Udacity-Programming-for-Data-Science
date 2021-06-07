@@ -1,0 +1,58 @@
+1
+00:00:00,634 --> 00:00:05,501
+Esta aula apresenta um dos mais
+poderosos conceitos da análise SQL:
+
+2
+00:00:05,567 --> 00:00:07,567
+a função de janela.
+
+3
+00:00:07,601 --> 00:00:10,200
+Ela permite comparar
+uma linha a outra
+
+4
+00:00:10,234 --> 00:00:12,100
+sem efetuar nenhum "join".
+
+5
+00:00:12,133 --> 00:00:14,434
+Isso significa
+fazer coisas simples,
+
+6
+00:00:14,467 --> 00:00:17,868
+como criar uma soma,
+e coisas complicadas,
+
+7
+00:00:17,901 --> 00:00:21,234
+como determinar se uma linha
+é maior do que a anterior
+
+8
+00:00:21,300 --> 00:00:24,000
+e classificá-la
+a partir das descobertas.
+
+9
+00:00:24,067 --> 00:00:27,100
+A maior parte dos cursos
+de SQL terminam antes disso,
+
+10
+00:00:27,133 --> 00:00:29,133
+então adquirir
+esses conhecimentos
+
+11
+00:00:29,167 --> 00:00:31,601
+e saber utilizá-los
+em diferentes situações
+
+12
+00:00:31,634 --> 00:00:34,167
+fará de você um analista
+extremamente eficiente.
+

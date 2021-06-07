@@ -1,0 +1,60 @@
+1
+00:00:00,000 --> 00:00:05,070
+If you have a common table expression or subquery that takes a really long time to run,
+
+2
+00:00:05,070 --> 00:00:07,710
+you might want to run it as a completely separate query and
+
+3
+00:00:07,710 --> 00:00:11,109
+then write it back into the database as it's own table.
+
+4
+00:00:11,109 --> 00:00:14,459
+Then, you can simply query the new table as you would any other,
+
+5
+00:00:14,460 --> 00:00:17,100
+to finish the things you're trying to calculate.
+
+6
+00:00:17,100 --> 00:00:21,935
+The big benefit to this approach is that you can improve the speed at which you explore.
+
+7
+00:00:21,934 --> 00:00:25,289
+Let's say you've got a subquery that takes an hour to write,
+
+8
+00:00:25,289 --> 00:00:27,899
+and then you've got an outer query that's pretty fast.
+
+9
+00:00:27,899 --> 00:00:32,024
+If you run both of them every time you want to make a small tweak to the outer query,
+
+10
+00:00:32,024 --> 00:00:34,030
+you're going to get really frustrated.
+
+11
+00:00:34,030 --> 00:00:38,280
+Instead, you can run that inner query once and write it to a table,
+
+12
+00:00:38,280 --> 00:00:42,039
+then iterating on the outer query will be quick and easy.
+
+13
+00:00:42,039 --> 00:00:45,420
+We'll dig into performance in more depth in later lessons.
+
+14
+00:00:45,420 --> 00:00:47,910
+For now, we'll focus on writing your subqueries and
+
+15
+00:00:47,909 --> 00:00:51,000
+common table expressions into the database as new tables.
+

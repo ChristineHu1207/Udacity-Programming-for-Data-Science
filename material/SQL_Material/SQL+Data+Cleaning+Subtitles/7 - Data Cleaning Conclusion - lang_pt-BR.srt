@@ -1,0 +1,34 @@
+1
+00:00:01,400 --> 00:00:04,067
+Nesta lição, você aprendeu
+a limpar dados bagunçados.
+
+2
+00:00:04,667 --> 00:00:07,767
+"Sequel" realmente torna mais fácil
+do que muitas outras ferramentas
+
+3
+00:00:07,801 --> 00:00:09,267
+fazer isso em grande escala.
+
+4
+00:00:09,834 --> 00:00:11,701
+A limpeza dos dados
+é um mal necessário.
+
+5
+00:00:11,735 --> 00:00:13,400
+E agora você tem
+várias habilidades
+
+6
+00:00:13,434 --> 00:00:15,634
+que podem ajudá-lo
+a limpar dados mais rápido.
+
+7
+00:00:15,668 --> 00:00:19,100
+Assim pode chegar aos pontos
+mais importantes da análise.
+

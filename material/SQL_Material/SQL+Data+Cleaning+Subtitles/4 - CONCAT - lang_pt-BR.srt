@@ -1,0 +1,43 @@
+1
+00:00:00,270 --> 00:00:03,067
+Agora digamos que queremos
+combinar o nome e o sobrenome
+
+2
+00:00:03,101 --> 00:00:05,567
+em uma única coluna
+de nome completo.
+
+3
+00:00:05,901 --> 00:00:09,334
+Você pode combinar strings
+de várias colunas usando "concat".
+
+4
+00:00:09,834 --> 00:00:12,434
+Basta determinar os valores
+que você quer concatenar
+
+5
+00:00:12,468 --> 00:00:14,067
+e separá-los com vírgulas.
+
+6
+00:00:14,400 --> 00:00:15,968
+Se você quer valores fixos,
+
+7
+00:00:16,002 --> 00:00:19,267
+coloque-os entre aspas simples
+como estou fazendo com o espaço.
+
+8
+00:00:24,000 --> 00:00:27,601
+Outra maneira é usar
+duas barras verticais
+
+9
+00:00:27,635 --> 00:00:29,868
+para executar
+a mesma concatenação.
+

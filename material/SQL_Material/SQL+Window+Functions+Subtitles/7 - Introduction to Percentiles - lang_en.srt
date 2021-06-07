@@ -1,0 +1,40 @@
+1
+00:00:00,380 --> 00:00:05,620
+In previous lessons, you imagined yourself as an operations manager,
+
+2
+00:00:05,620 --> 00:00:09,020
+doing analysis to help with inventory planning.
+
+3
+00:00:09,020 --> 00:00:11,200
+You looked at minimum, maximum,
+
+4
+00:00:11,200 --> 00:00:12,580
+and average order sizes,
+
+5
+00:00:12,580 --> 00:00:15,055
+to get a sense of what size order Parch and Posey
+
+6
+00:00:15,055 --> 00:00:18,515
+should be prepared to fulfill at any given time.
+
+7
+00:00:18,515 --> 00:00:21,340
+Really though, the best way to understand this,
+
+8
+00:00:21,340 --> 00:00:22,885
+would be to look at percentiles,
+
+9
+00:00:22,885 --> 00:00:25,310
+to see where the most orders fall.
+
+10
+00:00:25,310 --> 00:00:28,000
+We can do this with the NTILE window function.
+

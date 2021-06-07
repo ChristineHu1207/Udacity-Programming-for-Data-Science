@@ -1,0 +1,236 @@
+1
+00:00:00,000 --> 00:00:03,544
+Imagine yourself as a marketing manager at Parch & Posey.
+
+2
+00:00:03,544 --> 00:00:08,044
+You want to compare Facebook as a marketing channel against all other channels.
+
+3
+00:00:08,044 --> 00:00:10,695
+You know Facebook is a great channel for your business but,
+
+4
+00:00:10,695 --> 00:00:12,839
+is it better than all the rest combined?
+
+5
+00:00:12,839 --> 00:00:15,525
+Let's find out. In order to do this,
+
+6
+00:00:15,525 --> 00:00:17,385
+you'll need to create a derived column.
+
+7
+00:00:17,385 --> 00:00:20,685
+That means you'll take data from existing columns and modify it.
+
+8
+00:00:20,684 --> 00:00:23,910
+In previous lessons, we did this using arithmetic.
+
+9
+00:00:23,910 --> 00:00:25,710
+For this application, we use
+
+10
+00:00:25,710 --> 00:00:29,635
+the "CASE" statement which is SQL's way of handling "IF" "then" logic.
+
+11
+00:00:29,635 --> 00:00:35,189
+The case statement is followed by at least one pair of "WHEN" and "THEN" statements.
+
+12
+00:00:35,189 --> 00:00:38,390
+SQL's equivalent of "IF" "THEN".
+
+13
+00:00:38,390 --> 00:00:42,704
+It must finish with the word "END".
+
+14
+00:00:42,704 --> 00:00:48,259
+As you can see, the case statement checks each row to see if
+
+15
+00:00:48,259 --> 00:00:53,710
+the conditional statement "channel equals Facebook" is true.
+
+16
+00:00:53,710 --> 00:01:00,200
+If so, it results in the value "yes" being printed in the column "is_Facebook".
+
+17
+00:01:00,200 --> 00:01:05,600
+If not, that Rose value in the is_Facebook column is left "no".
+
+18
+00:01:05,599 --> 00:01:08,789
+This query makes it pretty easy to see what's happening because we've
+
+19
+00:01:08,790 --> 00:01:12,484
+included the case statement along with the channel column itself.
+
+20
+00:01:12,484 --> 00:01:14,429
+You can check each row to see whether channel
+
+21
+00:01:14,430 --> 00:01:17,240
+meets the condition "channel equals Facebook",
+
+22
+00:01:17,239 --> 00:01:21,689
+and then see the result in the column generated using the case statement.
+
+23
+00:01:21,689 --> 00:01:26,810
+Now, what we'd really like this query to do is filled in those nulls with the word "no".
+
+24
+00:01:26,810 --> 00:01:30,644
+We can do this with the L statement which provides a way to capture values
+
+25
+00:01:30,644 --> 00:01:35,545
+not specified in "WHEN" "THEN" statements.
+
+26
+00:01:35,545 --> 00:01:38,040
+If we want this new column to keep track of not just our
+
+27
+00:01:38,040 --> 00:01:40,965
+Facebook channel but also the direct channel,
+
+28
+00:01:40,965 --> 00:01:46,270
+we could change our case statement to use the "OR" operator.
+
+29
+00:01:48,040 --> 00:01:51,060
+The "WHEN" statement is
+
+30
+00:01:51,060 --> 00:01:54,519
+a logical condition similar to what you would put in a "WHERE" clause.
+
+31
+00:01:54,519 --> 00:02:00,719
+So you can use "AND", "LIKE", "IN" or any other operators you've already seen.
+
+32
+00:02:00,719 --> 00:02:03,420
+Imagine yourself in operations at Parch & Posey.
+
+33
+00:02:03,420 --> 00:02:06,765
+You'd like to classify orders into general groups based on
+
+34
+00:02:06,765 --> 00:02:11,000
+order size to get even more granular about inventory planning.
+
+35
+00:02:11,000 --> 00:02:13,349
+You can use a case statement to define a number of
+
+36
+00:02:13,349 --> 00:02:18,930
+outcomes by including as many "WHEN" "THEN" statements as you'd like.
+
+37
+00:02:18,930 --> 00:02:22,740
+In this example, the "WHEN" statements
+
+38
+00:02:22,740 --> 00:02:25,340
+will get evaluated in the order that they're written.
+
+39
+00:02:25,340 --> 00:02:28,995
+So, if the value in the total column of a given row is 600,
+
+40
+00:02:28,995 --> 00:02:32,265
+it will produce a result of over 500.
+
+41
+00:02:32,264 --> 00:02:36,269
+If the value in the total column is 169,
+
+42
+00:02:36,270 --> 00:02:38,790
+the database will first check to see if the total is
+
+43
+00:02:38,789 --> 00:02:42,239
+greater than 500 because that's the first "WHEN" statement.
+
+44
+00:02:42,240 --> 00:02:44,930
+169 is not greater than 500,
+
+45
+00:02:44,930 --> 00:02:47,879
+so we'll move on to evaluate the next "WHEN.
+
+46
+00:02:47,879 --> 00:02:52,740
+This process continues until a logical "WHEN" statement evaluates to
+
+47
+00:02:52,740 --> 00:02:58,843
+true in which case the "THEN" statement will be recorded in the total group column.
+
+48
+00:02:58,842 --> 00:03:06,569
+For 169, this would happen when the "WHEN" statement results in 101 to 300.
+
+49
+00:03:06,569 --> 00:03:11,169
+While the above works, it's really best to create "WHEN" statements that don't overlap.
+
+50
+00:03:11,169 --> 00:03:16,299
+The conditional statement "when total is greater than 500" overlaps with the statement
+
+51
+00:03:16,300 --> 00:03:18,640
+"when total is greater than 300" for
+
+52
+00:03:18,639 --> 00:03:22,889
+every value greater than 500 which is a little confusing.
+
+53
+00:03:22,889 --> 00:03:25,000
+A better way to write the above would be to
+
+54
+00:03:25,000 --> 00:03:28,349
+define specific groups that don't overlap with one another.
+
+55
+00:03:28,349 --> 00:03:31,495
+You can do this by stringing together multiple conditional statements
+
+56
+00:03:31,495 --> 00:03:36,990
+with "AND" and "OR", the same way you might in a "WHERE" clause.
+
+57
+00:03:43,580 --> 00:03:47,219
+In the final parts of this lesson,
+
+58
+00:03:47,219 --> 00:03:49,870
+we'll take these casements just one step further by
+
+59
+00:03:49,870 --> 00:03:53,000
+combining them with aggregations that we looked at earlier.
+

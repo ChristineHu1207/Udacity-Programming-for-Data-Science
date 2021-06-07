@@ -1,0 +1,88 @@
+1
+00:00:00,020 --> 00:00:03,330
+The count function can also be used to count
+
+2
+00:00:03,330 --> 00:00:06,754
+the number of non-null records in an individual column.
+
+3
+00:00:06,754 --> 00:00:10,605
+To illustrate this, let's take a look at the accounts table.
+
+4
+00:00:10,605 --> 00:00:15,560
+As you can see, there are 354 rows in the accounts table.
+
+5
+00:00:15,560 --> 00:00:19,274
+Now, by substituting ID for the star,
+
+6
+00:00:19,274 --> 00:00:23,259
+we can see how many non-null records there are in the ID column.
+
+7
+00:00:23,260 --> 00:00:26,495
+Let's give the column a more sensible name while we're at it.
+
+8
+00:00:26,495 --> 00:00:29,740
+Since there are no null values in the ID column,
+
+9
+00:00:29,739 --> 00:00:32,899
+it returns the same result as count star.
+
+10
+00:00:32,899 --> 00:00:42,859
+Now, let's try this with a column that we know contains some null values, primary poc.
+
+11
+00:00:42,859 --> 00:00:47,024
+This time, we get a result that is nine lower than our previous result.
+
+12
+00:00:47,024 --> 00:00:51,390
+Let's run a quick query to verify that there are nine null values in
+
+13
+00:00:51,390 --> 00:00:58,194
+the primary poc column.
+
+14
+00:00:58,194 --> 00:01:01,440
+And here they are,
+
+15
+00:01:01,439 --> 00:01:03,594
+the nine rows with null values.
+
+16
+00:01:03,594 --> 00:01:06,120
+One thing you may have noticed is that count can be
+
+17
+00:01:06,120 --> 00:01:09,000
+used in columns with non numerical values.
+
+18
+00:01:09,000 --> 00:01:12,930
+This is not true of all aggregation functions, but it makes sense.
+
+19
+00:01:12,930 --> 00:01:17,880
+The count function is just looking for non-null data and text is not null.
+
+20
+00:01:17,879 --> 00:01:20,354
+Some of the functions we're about to learn like sum and
+
+21
+00:01:20,355 --> 00:01:23,793
+average are impossible to apply to text because,
+
+22
+00:01:23,793 --> 00:01:26,610
+well, how do you take the average of a bunch of account names.
+

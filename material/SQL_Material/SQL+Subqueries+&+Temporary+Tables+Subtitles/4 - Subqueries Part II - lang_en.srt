@@ -1,0 +1,76 @@
+1
+00:00:00,000 --> 00:00:03,825
+Subqueries can be used in several places within a query.
+
+2
+00:00:03,825 --> 00:00:05,880
+It can really be used anywhere you might use
+
+3
+00:00:05,879 --> 00:00:10,550
+a table name or even a column name or an individual value.
+
+4
+00:00:10,550 --> 00:00:13,095
+They're especially useful in conditional logic,
+
+5
+00:00:13,095 --> 00:00:15,960
+in conjunction with where or Join clauses,
+
+6
+00:00:15,960 --> 00:00:18,539
+or in the when portion of a case statement.
+
+7
+00:00:18,539 --> 00:00:21,629
+For example, you might want to return only orders
+
+8
+00:00:21,629 --> 00:00:25,515
+that occurred in the same month as Parch and Posies first order ever.
+
+9
+00:00:25,515 --> 00:00:27,719
+To get the date of the first order,
+
+10
+00:00:27,719 --> 00:00:30,519
+you can write a subquery with a min function.
+
+11
+00:00:30,519 --> 00:00:48,289
+Let's add a date_trunc function to get the month.
+
+12
+00:00:48,289 --> 00:00:50,479
+Finally, let's write an outer query that
+
+13
+00:00:50,479 --> 00:01:23,135
+uses this to filter the orders table and sorts by the occurred at column.
+
+14
+00:01:23,135 --> 00:01:39,224
+You can see that all of these orders took place in December 2013,
+
+15
+00:01:39,224 --> 00:01:41,584
+the same month as the first order.
+
+16
+00:01:41,584 --> 00:01:46,419
+This query works because the result of the subquery is only one cell.
+
+17
+00:01:46,420 --> 00:01:50,415
+Most conditional logic will work with subqueries containing one-cell results.
+
+18
+00:01:50,415 --> 00:01:53,370
+But IN is the only type of conditional logic
+
+19
+00:01:53,370 --> 00:01:57,000
+that will work when the inner query contains multiple results.
+

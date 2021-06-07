@@ -1,0 +1,126 @@
+1
+00:00:01,000 --> 00:00:03,033
+A função "contar"
+também pode ser usada
+
+2
+00:00:03,067 --> 00:00:05,167
+para contar um número
+de registros não nulos
+
+3
+00:00:05,200 --> 00:00:07,334
+em uma coluna individual.
+
+4
+00:00:07,367 --> 00:00:10,634
+Para ilustrar isso, vamos olhar
+a tabela de contas.
+
+5
+00:00:11,534 --> 00:00:16,133
+Observe que há 354 linhas
+na tabela de contas.
+
+6
+00:00:16,167 --> 00:00:19,300
+Agora, substituindo ID
+pelo asterisco,
+
+7
+00:00:19,334 --> 00:00:23,667
+vemos quantos registros não nulos
+existem na coluna de IDs.
+
+8
+00:00:23,701 --> 00:00:26,968
+Vamos dar à coluna um nome
+mais sensível enquanto isso.
+
+9
+00:00:27,000 --> 00:00:29,968
+Já que há valores não nulos
+na coluna de IDs,
+
+10
+00:00:30,000 --> 00:00:32,968
+ela devolve os mesmos resultados
+que "count(*)".
+
+11
+00:00:33,033 --> 00:00:34,868
+Vamos tentar o mesmo
+em uma coluna
+
+12
+00:00:34,968 --> 00:00:38,834
+que contém alguns
+valores nulos, PDC primário.
+
+13
+00:00:42,968 --> 00:00:45,968
+Desta vez, o resultado
+foi nove, para menos,
+
+14
+00:00:46,000 --> 00:00:47,567
+do que o resultado anterior.
+
+15
+00:00:47,601 --> 00:00:49,968
+Vamos fazer uma consulta rápida
+para verificar
+
+16
+00:00:50,033 --> 00:00:53,601
+que há nove valores nulos
+na coluna PDC primário.
+
+17
+00:01:00,634 --> 00:01:03,834
+Aqui estão elas: nove linhas
+de valores nulos.
+
+18
+00:01:03,868 --> 00:01:06,701
+Você deve ter notado
+é que "count" pode ser usado
+
+19
+00:01:06,767 --> 00:01:09,067
+em colunas com valores
+não numéricos.
+
+20
+00:01:09,133 --> 00:01:11,701
+Isso não ocorre em todas
+as funções de agregação,
+
+21
+00:01:11,767 --> 00:01:13,300
+mas faz sentido.
+
+22
+00:01:13,334 --> 00:01:16,601
+A função "contar" procura
+somente dados não nulos
+
+23
+00:01:16,634 --> 00:01:17,934
+e texto não é nulo.
+
+24
+00:01:17,968 --> 00:01:21,300
+Algumas das funções que iremos
+aprender, como "sum" e "average",
+
+25
+00:01:21,334 --> 00:01:23,200
+não podem ser
+aplicadas a textos
+
+26
+00:01:23,234 --> 00:01:26,968
+porque, bem, como se calcula
+a média de vários nomes de contas?
+

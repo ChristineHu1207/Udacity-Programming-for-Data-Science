@@ -1,0 +1,40 @@
+1
+00:00:00,000 --> 00:00:03,810
+If you're planning to write several window functions in the same query,
+
+2
+00:00:03,810 --> 00:00:05,340
+using the same window,
+
+3
+00:00:05,340 --> 00:00:07,835
+you can create an alias.
+
+4
+00:00:07,835 --> 00:00:13,460
+Let's use the previous example in which we tested a ton of different window functions.
+
+5
+00:00:13,460 --> 00:00:16,320
+We'll define the alias using a window clause,
+
+6
+00:00:16,320 --> 00:00:20,675
+which would normally go between the where clause and the group by clause.
+
+7
+00:00:20,675 --> 00:00:22,800
+Since this query has neither of those,
+
+8
+00:00:22,800 --> 00:00:26,600
+we'll put this after from.
+
+9
+00:01:14,120 --> 00:01:18,750
+As you can see the results are exactly the same,
+
+10
+00:01:18,750 --> 00:01:21,000
+but the query is much easier to read.
+

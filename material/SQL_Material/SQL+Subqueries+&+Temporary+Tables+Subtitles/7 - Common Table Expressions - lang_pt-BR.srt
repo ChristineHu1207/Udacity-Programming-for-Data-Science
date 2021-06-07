@@ -1,0 +1,119 @@
+1
+00:00:00,767 --> 00:00:02,501
+Se você tem uma expressão
+de tabela comum
+
+2
+00:00:02,535 --> 00:00:05,300
+ou uma subconsulta que leva
+muito tempo para ser executada,
+
+3
+00:00:05,334 --> 00:00:06,567
+pode querer executá-la
+
+4
+00:00:06,601 --> 00:00:08,033
+como uma consulta
+completamente separada
+
+5
+00:00:08,067 --> 00:00:09,601
+e então escrevê-la de novo
+no banco de dados
+
+6
+00:00:09,635 --> 00:00:11,133
+como sua própria tabela.
+
+7
+00:00:11,167 --> 00:00:13,467
+Então você pode consultar
+a nova tabela
+
+8
+00:00:13,501 --> 00:00:14,767
+como faria
+com qualquer outra,
+
+9
+00:00:14,801 --> 00:00:16,934
+para terminar as coisas
+que está tentando calcular.
+
+10
+00:00:17,234 --> 00:00:19,100
+O grande benefício
+dessa abordagem
+
+11
+00:00:19,134 --> 00:00:21,801
+é que você pode melhorar
+a velocidade com a qual explora.
+
+12
+00:00:22,267 --> 00:00:23,734
+Digamos que você tem
+uma subconsulta
+
+13
+00:00:23,768 --> 00:00:25,467
+que demora uma hora
+para escrever
+
+14
+00:00:25,501 --> 00:00:28,133
+e tem uma consulta externa
+que é muito rápida.
+
+15
+00:00:28,501 --> 00:00:30,467
+Se você executar as duas
+sempre que quiser fazer
+
+16
+00:00:30,501 --> 00:00:32,300
+um pequeno ajuste
+na consulta externa,
+
+17
+00:00:32,334 --> 00:00:34,100
+vai ficar muito frustrado.
+
+18
+00:00:34,134 --> 00:00:37,000
+Em vez disso, pode executar
+essa consulta interna uma vez
+
+19
+00:00:37,034 --> 00:00:38,667
+e escrevê-la em uma tabela.
+
+20
+00:00:38,701 --> 00:00:41,701
+Assim iterá-la na consulta externa
+será rápido e fácil.
+
+21
+00:00:42,133 --> 00:00:44,267
+Vamos nos aprofundar mais
+no desempenho
+
+22
+00:00:44,301 --> 00:00:45,501
+nas próximas lições.
+
+23
+00:00:45,535 --> 00:00:48,000
+Por enquanto, vamos focar
+em escrever subconsultas
+
+24
+00:00:48,034 --> 00:00:50,200
+e expressões de tabela comuns
+no banco de dados
+
+25
+00:00:50,234 --> 00:00:51,467
+como novas tabelas.
+

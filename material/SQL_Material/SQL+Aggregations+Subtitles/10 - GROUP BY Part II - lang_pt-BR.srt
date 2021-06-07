@@ -1,0 +1,87 @@
+1
+00:00:01,634 --> 00:00:04,901
+Se queremos segmentar nossos dados
+em partes ainda menores,
+
+2
+00:00:04,934 --> 00:00:07,267
+podemos agrupá-los
+em colunas múltiplas.
+
+3
+00:00:07,300 --> 00:00:10,434
+Imagine-se como um gerente
+de marketing da Parch & Posey
+
+4
+00:00:10,467 --> 00:00:12,667
+tentando entender
+como cada conta interagiu
+
+5
+00:00:12,701 --> 00:00:15,067
+com variados canais
+de publicidade.
+
+6
+00:00:15,100 --> 00:00:18,267
+Quais canais estão gerando tráfego
+e gerando aquisições?
+
+7
+00:00:18,300 --> 00:00:21,167
+Estamos investindo em canais
+cujo custo não compensa?
+
+8
+00:00:21,200 --> 00:00:23,834
+Quanto tráfego obtemos
+de cada canal?
+
+9
+00:00:24,667 --> 00:00:27,734
+Uma forma de começar a olhar
+para essas questões
+
+10
+00:00:27,767 --> 00:00:30,133
+é contar todos os eventos
+de cada canal
+
+11
+00:00:30,167 --> 00:00:31,834
+para cada ID de conta.
+
+12
+00:00:33,734 --> 00:00:37,300
+Parece que a informação útil aqui
+está na coluna de eventos.
+
+13
+00:00:37,334 --> 00:00:40,434
+Vamos reordená-la para destacar
+os canais com volume mais alto
+
+14
+00:00:40,467 --> 00:00:41,868
+para cada conta.
+
+15
+00:00:45,133 --> 00:00:48,334
+Você vai ver que o ID da conta
+vem antes dos eventos
+
+16
+00:00:48,367 --> 00:00:50,200
+na cláusula "order by".
+
+17
+00:00:50,234 --> 00:00:52,834
+Nos resultados, você vê
+que eles são ordenados
+
+18
+00:00:52,868 --> 00:00:56,501
+primeiro por ID de conta, depois
+por eventos dentro do ID de conta.
+

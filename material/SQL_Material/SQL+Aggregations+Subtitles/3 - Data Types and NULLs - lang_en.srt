@@ -1,0 +1,112 @@
+1
+00:00:00,260 --> 00:00:03,209
+To get a feel for how nulls work,
+
+2
+00:00:03,209 --> 00:00:05,849
+let's pull a set of records from the accounts table with
+
+3
+00:00:05,849 --> 00:00:10,294
+IDs that fall between 1500 and 1600.
+
+4
+00:00:10,294 --> 00:00:14,064
+We can see that the primary POC,
+
+5
+00:00:14,064 --> 00:00:15,924
+which stands for Point Of Contact,
+
+6
+00:00:15,925 --> 00:00:18,775
+is blank for the Intel account.
+
+7
+00:00:18,774 --> 00:00:21,274
+This could simply be an error in the data.
+
+8
+00:00:21,274 --> 00:00:24,739
+Maybe a point of contact that was accidentally deleted at some point,
+
+9
+00:00:24,739 --> 00:00:27,579
+or it could be that Parch & Posey's point of contact left
+
+10
+00:00:27,579 --> 00:00:31,589
+the company and they don't yet have a new point of contact for that account.
+
+11
+00:00:31,589 --> 00:00:34,715
+Either way, there is no data in this particular cell.
+
+12
+00:00:34,715 --> 00:00:36,645
+This cell is null.
+
+13
+00:00:36,645 --> 00:00:39,460
+Imagining yourself as a sales manager at Parch & Posey,
+
+14
+00:00:39,460 --> 00:00:43,884
+you may want to know all of the accounts for which the primary POC is null.
+
+15
+00:00:43,884 --> 00:00:45,669
+If you don't have a point of contact,
+
+16
+00:00:45,670 --> 00:00:49,554
+chances are you're not going to be able to keep that customer for much longer.
+
+17
+00:00:49,554 --> 00:00:51,545
+In order to find all these accounts,
+
+18
+00:00:51,545 --> 00:00:54,070
+we'll have to use some special syntax in our WHERE clause.
+
+19
+00:00:54,070 --> 00:01:02,700
+Turns out, there are quite a few accounts without points of contact.
+
+20
+00:01:02,700 --> 00:01:05,564
+So, the special thing about nulls that you need to write
+
+21
+00:01:05,564 --> 00:01:13,825
+IS NULL instead of EQUALS NULL.
+
+22
+00:01:13,825 --> 00:01:16,755
+The reason this doesn't work is that NULL is not a value,
+
+23
+00:01:16,754 --> 00:01:18,969
+it's a property of the data.
+
+24
+00:01:18,969 --> 00:01:20,974
+This is different from zero or a space,
+
+25
+00:01:20,974 --> 00:01:23,204
+both of which are values.
+
+26
+00:01:23,204 --> 00:01:25,774
+If you want to find the inverse of our previous result set,
+
+27
+00:01:25,775 --> 00:01:29,344
+you can use this syntax, IS NOT NULL.
+
+28
+00:01:29,344 --> 00:01:35,429
+As you can see, this returns all rows for which there are values in the primary_POC column.
+

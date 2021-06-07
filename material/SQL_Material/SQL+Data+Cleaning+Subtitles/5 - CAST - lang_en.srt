@@ -1,0 +1,136 @@
+1
+00:00:00,000 --> 00:00:04,620
+We've already explored date functions like date trunc and date part.
+
+2
+00:00:04,620 --> 00:00:06,345
+In an upcoming lesson,
+
+3
+00:00:06,344 --> 00:00:10,294
+we'll dig into even more functions for getting value from dates.
+
+4
+00:00:10,294 --> 00:00:12,800
+The vast majority of analysis you perform in
+
+5
+00:00:12,800 --> 00:00:15,470
+a professional setting will have dates attached to it,
+
+6
+00:00:15,470 --> 00:00:18,255
+but you might not be able to get value out of them,
+
+7
+00:00:18,254 --> 00:00:20,570
+if the dates are not formatted correctly.
+
+8
+00:00:20,570 --> 00:00:23,629
+Let's say you've got three separate columns for day,
+
+9
+00:00:23,629 --> 00:00:26,059
+month, and year of a given record.
+
+10
+00:00:26,059 --> 00:00:29,974
+Problems like this are common for data that was manipulated in excel at some point,
+
+11
+00:00:29,975 --> 00:00:32,359
+or exported from a third party system,
+
+12
+00:00:32,359 --> 00:00:35,314
+or even data that was just manually entered.
+
+13
+00:00:35,314 --> 00:00:38,174
+In order to really maximize value here,
+
+14
+00:00:38,174 --> 00:00:40,549
+you'll need to convert month names into numbers,
+
+15
+00:00:40,549 --> 00:00:44,539
+then concatenate all of these fields together along with hyphens,
+
+16
+00:00:44,539 --> 00:00:48,439
+and then tell the database to understand that the resulting output is a date,
+
+17
+00:00:48,439 --> 00:00:50,620
+which you can do by using the cast function.
+
+18
+00:00:50,621 --> 00:00:53,975
+Let's tackle the first couple steps of this first.
+
+19
+00:00:53,975 --> 00:00:58,450
+This first step converted month names into numbers.
+
+20
+00:00:58,450 --> 00:01:02,510
+As you can see, January comes out as one.
+
+21
+00:01:02,509 --> 00:01:06,069
+Now let's concatenate that value together with the year and
+
+22
+00:01:06,069 --> 00:01:12,039
+the day to create something that looks like a real date.
+
+23
+00:01:14,659 --> 00:01:24,859
+For the last step, we'll cast this new field as a date format.
+
+24
+00:01:24,859 --> 00:01:29,545
+You can see here that the database now understands this as a date and has attached
+
+25
+00:01:29,545 --> 00:01:34,995
+the appropriate zeros to these records so that it reads properly.
+
+26
+00:01:34,995 --> 00:01:37,965
+The cast function can be a little tricky to read,
+
+27
+00:01:37,965 --> 00:01:40,500
+but luckily, there's also a shorthand.
+
+28
+00:01:40,500 --> 00:01:43,640
+Rather than wrapping all of this in a cast function,
+
+29
+00:01:43,640 --> 00:01:47,939
+we can simply add two colons and then the data type we'd like to cast at
+
+30
+00:01:47,939 --> 00:01:53,280
+the end of this section.
+
+31
+00:01:53,281 --> 00:01:59,760
+The cast function is most useful for turning strings into numbers or dates.
+
+32
+00:01:59,760 --> 00:02:03,109
+Typically, if you want to turn a number into a string,
+
+33
+00:02:03,109 --> 00:02:06,679
+performing any type of string operation on it like left, right,
+
+34
+00:02:06,680 --> 00:02:11,000
+or substring will automatically cast the data while performing the operation.
+

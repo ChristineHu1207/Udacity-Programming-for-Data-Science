@@ -1,0 +1,64 @@
+1
+00:00:00,000 --> 00:00:02,430
+One problem with subqueries is that they can
+
+2
+00:00:02,430 --> 00:00:05,429
+make your queries lengthy and difficult to read.
+
+3
+00:00:05,429 --> 00:00:09,209
+Common Table expressions or CTEs can help break
+
+4
+00:00:09,210 --> 00:00:14,380
+your query into separate components so that your query logic is more easily readable.
+
+5
+00:00:14,380 --> 00:00:16,260
+You can read the subqueries logic on its
+
+6
+00:00:16,260 --> 00:00:21,040
+own and then read the final queries logic easily as well.
+
+7
+00:00:21,039 --> 00:00:24,899
+Let's look back over this example in which we found the average number of events per
+
+8
+00:00:24,899 --> 00:00:29,939
+day in each marketing channel.
+
+9
+00:00:29,940 --> 00:00:31,600
+Let's break the subquery out into
+
+10
+00:00:31,600 --> 00:00:37,760
+his own common table expression which we'll create using the WITH command.
+
+11
+00:01:03,759 --> 00:01:07,140
+Here, we're only defining
+
+12
+00:01:07,140 --> 00:01:12,394
+this one common table expression but we could theoretically write as many as we want.
+
+13
+00:01:12,394 --> 00:01:15,629
+We need to define any common table expressions at the beginning of
+
+14
+00:01:15,629 --> 00:01:20,060
+the query in order to use them in our final query at the bottom.
+
+15
+00:01:20,060 --> 00:01:24,465
+Each common table expression gets an alias just like a subquery.
+
+16
+00:01:24,465 --> 00:01:27,030
+Here, that alias is events.
+

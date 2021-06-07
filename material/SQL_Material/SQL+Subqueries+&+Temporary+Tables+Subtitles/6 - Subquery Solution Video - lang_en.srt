@@ -1,0 +1,656 @@
+1
+00:00:00,190 --> 00:00:04,310
+Now that we're getting to more complex queries using Subqueries,
+
+2
+00:00:04,309 --> 00:00:07,309
+the classroom workspace may seem a bit cramped.
+
+3
+00:00:07,309 --> 00:00:10,504
+If you've not already been writing your queries in an editor,
+
+4
+00:00:10,505 --> 00:00:13,950
+now is a great time to start. Here's my workflow.
+
+5
+00:00:13,949 --> 00:00:15,544
+You can see over here on the left,
+
+6
+00:00:15,544 --> 00:00:20,579
+I have my editor open with the subqueries.sql extension.
+
+7
+00:00:20,579 --> 00:00:23,299
+And then over here on the right, is the classroom,
+
+8
+00:00:23,300 --> 00:00:26,620
+where I can read the questions and execute my code.
+
+9
+00:00:26,620 --> 00:00:29,439
+So, now let's take a look at this first question.
+
+10
+00:00:29,439 --> 00:00:32,284
+It says provide the name of the sales rep in
+
+11
+00:00:32,284 --> 00:00:36,709
+each region with the largest amount of total USD sales.
+
+12
+00:00:36,710 --> 00:00:38,579
+In order to solve this problem,
+
+13
+00:00:38,579 --> 00:00:41,614
+let's first try to pull some of this information together.
+
+14
+00:00:41,615 --> 00:00:45,375
+We can see that the sales rep information exists in this table.
+
+15
+00:00:45,375 --> 00:00:47,450
+The region information is over here,
+
+16
+00:00:47,450 --> 00:00:50,780
+and the total amount USD is over here in the orders table.
+
+17
+00:00:50,780 --> 00:00:53,270
+Therefore we need to join these four tables
+
+18
+00:00:53,270 --> 00:00:56,949
+together in order to pull all this information together.
+
+19
+00:00:56,948 --> 00:00:59,599
+So, let's go ahead and start.
+
+20
+00:00:59,600 --> 00:01:30,109
+Start with a comment.
+
+21
+00:01:30,109 --> 00:01:46,289
+Okay, so that should
+
+22
+00:01:46,290 --> 00:01:49,625
+make it easier to find that stuff when I come back.
+
+23
+00:01:49,625 --> 00:01:52,424
+And let's go ahead and start tackling this problem.
+
+24
+00:01:52,424 --> 00:01:59,478
+So, we want to pool all this information together.
+
+25
+00:01:59,478 --> 00:02:05,677
+So, let's go ahead and start with the sales rep table.
+
+26
+00:02:05,677 --> 00:02:11,312
+I'll label that with an alias of SR. Let's join the region table,
+
+27
+00:02:11,312 --> 00:02:13,450
+I'll label that with an alias of R. We want to
+
+28
+00:02:13,449 --> 00:02:15,854
+join this where the primary and foreign keys match,
+
+29
+00:02:15,854 --> 00:02:24,444
+and so therefore that's just like SR region ID is equal to r.id.
+
+30
+00:02:24,444 --> 00:02:29,444
+And then if we want to pull the accounts information,
+
+31
+00:02:29,444 --> 00:02:38,192
+I'll have an alias of A and we want a sales rep id equal to sr.id.
+
+32
+00:02:38,193 --> 00:02:44,950
+And then let's join the orders table and we'll join now
+
+33
+00:02:44,949 --> 00:02:52,457
+on o.account id equal to a.id.
+
+34
+00:02:52,457 --> 00:02:57,115
+Cool. So, now we sort of have all of our information pulled together.
+
+35
+00:02:57,115 --> 00:03:01,000
+We can see from the query we're going to need the name of the sales rep,
+
+36
+00:03:01,000 --> 00:03:06,310
+the region, and then the total amount of sales for each of these reps.
+
+37
+00:03:06,310 --> 00:03:09,689
+So, let's go ahead and just pull some of that information together.
+
+38
+00:03:09,689 --> 00:03:13,525
+So, if we pull the sales rep information,
+
+39
+00:03:13,525 --> 00:03:20,760
+and then we can pull the region information,
+
+40
+00:03:20,759 --> 00:03:26,992
+and then the orders.
+
+41
+00:03:26,992 --> 00:03:29,615
+We want the total amount,
+
+42
+00:03:29,615 --> 00:03:37,275
+and we need that basically for each rep we want.
+
+43
+00:03:37,275 --> 00:03:42,155
+The sum of this. So, let's just call that total sales.
+
+44
+00:03:42,155 --> 00:03:47,980
+And then we're going to want to group by the things that aren't in our alias.
+
+45
+00:03:47,980 --> 00:03:49,590
+So, our alias is right here,
+
+46
+00:03:49,590 --> 00:03:51,993
+and we have these two columns that are outside of it.
+
+47
+00:03:51,993 --> 00:03:54,014
+I'll just do One comma two,
+
+48
+00:03:54,014 --> 00:04:02,769
+and we might do an order by the third descending let's say.
+
+49
+00:04:02,770 --> 00:04:04,430
+Let's go ahead and run this,
+
+50
+00:04:04,430 --> 00:04:08,125
+see what we get.
+
+51
+00:04:08,125 --> 00:04:10,969
+Cool.
+
+52
+00:04:10,969 --> 00:04:12,802
+So, it looks like that executed.
+
+53
+00:04:12,802 --> 00:04:15,514
+You can see we only got one name column back,
+
+54
+00:04:15,514 --> 00:04:16,849
+and that's probably because,
+
+55
+00:04:16,850 --> 00:04:22,265
+the workspace is confused about having these two columns named the same thing.
+
+56
+00:04:22,264 --> 00:04:24,500
+So, let's be more explicit.
+
+57
+00:04:24,500 --> 00:04:30,694
+Let's just call this rep, name, and region.
+
+58
+00:04:30,694 --> 00:04:37,298
+Let's try that again.
+
+59
+00:04:37,298 --> 00:04:38,644
+Cool.
+
+60
+00:04:38,644 --> 00:04:40,475
+So, now we got three of them.
+
+61
+00:04:40,475 --> 00:04:43,470
+We have the rep, the region, and the total sales.
+
+62
+00:04:43,470 --> 00:04:44,915
+But for this question,
+
+63
+00:04:44,915 --> 00:04:47,300
+we want to provide the name of the sales rep in
+
+64
+00:04:47,300 --> 00:04:50,210
+each region with the largest amount of total sales.
+
+65
+00:04:50,209 --> 00:04:54,409
+So basically, what we want for the Southeast region is we want
+
+66
+00:04:54,410 --> 00:04:58,737
+this individual for the Northeast region we want this individual,
+
+67
+00:04:58,737 --> 00:04:59,870
+but here we have
+
+68
+00:04:59,870 --> 00:05:03,699
+another Southeast region person we don't want them showing up in our table.
+
+69
+00:05:03,699 --> 00:05:05,479
+This person should be for the West,
+
+70
+00:05:05,480 --> 00:05:11,420
+and then any other regions that we have we basically just want that top individual.
+
+71
+00:05:11,420 --> 00:05:17,345
+So, in order to do this,
+
+72
+00:05:17,345 --> 00:05:21,095
+we're going to have to do a tricky join,
+
+73
+00:05:21,095 --> 00:05:25,360
+but this is pretty common.
+
+74
+00:05:25,360 --> 00:05:31,335
+Basically, we have the information from this table and we like that.
+
+75
+00:05:31,334 --> 00:05:52,490
+So we're going to create a subquery.
+
+76
+00:05:52,490 --> 00:05:55,050
+And I'm just going to call this t1.
+
+77
+00:05:55,050 --> 00:05:58,276
+We could probably come up with a better naming convention for that.
+
+78
+00:05:58,276 --> 00:06:02,039
+But, we want to pull from t1 and then basically what we want to do,
+
+79
+00:06:02,040 --> 00:06:05,110
+is we want to select the region.
+
+80
+00:06:05,110 --> 00:06:11,725
+So, for each region we just want the maximum total sales.
+
+81
+00:06:11,725 --> 00:06:21,689
+So, from this table that we just looked at that one exists right here,
+
+82
+00:06:21,689 --> 00:06:27,540
+we're going to pull the region along with the max total sales for that region.
+
+83
+00:06:27,540 --> 00:06:31,035
+And because this is already grouped by the individual,
+
+84
+00:06:31,035 --> 00:06:34,740
+we're just going to get the max number over here for each region.
+
+85
+00:06:34,740 --> 00:06:37,650
+So, for Southeast that should just pull this number,
+
+86
+00:06:37,649 --> 00:06:40,259
+and for Northeast it should just pull this number.
+
+87
+00:06:40,259 --> 00:06:41,459
+And for the West,
+
+88
+00:06:41,459 --> 00:06:44,324
+it should pull this number and then it'll keep looking.
+
+89
+00:06:44,324 --> 00:06:46,349
+And then you can see we have this Northeast region,
+
+90
+00:06:46,350 --> 00:06:48,195
+and so it should just pull this max one,
+
+91
+00:06:48,194 --> 00:06:50,500
+and all the rest of these should go away.
+
+92
+00:06:50,500 --> 00:06:53,670
+Unfortunately, we can't do this all at once,
+
+93
+00:06:53,670 --> 00:06:56,995
+because if we group by the individual again,
+
+94
+00:06:56,995 --> 00:06:59,610
+the individual along with the region is still
+
+95
+00:06:59,610 --> 00:07:03,074
+unique so we'd end up with all of these table values back.
+
+96
+00:07:03,074 --> 00:07:06,254
+But if we grew by just the region, and we pull the max,
+
+97
+00:07:06,254 --> 00:07:11,153
+we should only get the one rep with the maximum amount of sales.
+
+98
+00:07:11,153 --> 00:07:18,314
+So, that's what we're going to do in this table.
+
+99
+00:07:18,314 --> 00:07:28,480
+So, this is the max sales for the region because we have another aggregate up here,
+
+100
+00:07:28,480 --> 00:07:31,569
+we're going to need to group by anything that's not in the aggregate.
+
+101
+00:07:31,569 --> 00:07:33,298
+So, it's just this first thing.
+
+102
+00:07:33,298 --> 00:07:37,709
+Well let's go ahead and run this, make sure that it works.
+
+103
+00:07:37,910 --> 00:07:43,285
+Cool. So, now what you're seeing is we have these four regions,
+
+104
+00:07:43,285 --> 00:07:46,540
+and I think I said the wrong thing about the Northeast earlier.
+
+105
+00:07:46,540 --> 00:07:49,194
+We have these four regions each with their max sales,
+
+106
+00:07:49,194 --> 00:07:53,290
+and essentially what we want to do is we want to match that back to the original table.
+
+107
+00:07:53,290 --> 00:07:55,825
+We want to match that to the table that we had before,
+
+108
+00:07:55,824 --> 00:07:59,664
+where the regions match as well as where the total sales,
+
+109
+00:07:59,665 --> 00:08:02,360
+is equal to the max sales.
+
+110
+00:08:02,360 --> 00:08:03,995
+So, let's go ahead and do that.
+
+111
+00:08:03,995 --> 00:08:06,069
+So, we have this table,
+
+112
+00:08:06,069 --> 00:08:09,964
+that's this one that exists over here on the right now.
+
+113
+00:08:09,964 --> 00:08:12,174
+So, we're going to take that and we'll just,
+
+114
+00:08:12,175 --> 00:08:17,912
+again I'm just going to call it T2.
+
+115
+00:08:17,911 --> 00:08:23,370
+So let's pull from that.
+
+116
+00:08:23,370 --> 00:08:28,625
+And we want to join on this table down here.
+
+117
+00:08:28,625 --> 00:08:33,850
+So, we're going to join on this table down here.
+
+118
+00:08:33,850 --> 00:08:37,615
+And I'll just stay that's with t3.
+
+119
+00:08:37,615 --> 00:08:40,878
+So, basically this table right here is t2.
+
+120
+00:08:40,878 --> 00:08:43,525
+T3 was the table that we executed earlier,
+
+121
+00:08:43,524 --> 00:08:46,569
+and we want to join where this max sales
+
+122
+00:08:46,570 --> 00:08:49,420
+is equal to the sales that we saw in that earlier table,
+
+123
+00:08:49,419 --> 00:08:51,219
+and then pull both the region,
+
+124
+00:08:51,220 --> 00:08:56,529
+and the rep from the join.
+
+125
+00:08:56,529 --> 00:08:58,129
+So let's select.
+
+126
+00:08:58,129 --> 00:09:02,004
+And essentially it really doesn't matter where we pull the region,
+
+127
+00:09:02,004 --> 00:09:04,894
+or whether we pull max sales, or total sales.
+
+128
+00:09:04,894 --> 00:09:08,053
+The really important part here is the join portion.
+
+129
+00:09:08,053 --> 00:09:13,029
+So, from t2 we could pull the region name,
+
+130
+00:09:13,029 --> 00:09:18,750
+and from t2 we could also pull the max sales,
+
+131
+00:09:18,750 --> 00:09:23,576
+and then from t3 we need to pull the rep name.
+
+132
+00:09:23,576 --> 00:09:30,240
+I'm just going to put that first.
+
+133
+00:09:30,240 --> 00:09:32,164
+Okay.
+
+134
+00:09:32,164 --> 00:09:35,389
+So, here we have the three parts that we need to pull,
+
+135
+00:09:35,389 --> 00:09:42,314
+and then the important part here is how we join these two tables together.
+
+136
+00:09:42,315 --> 00:09:45,645
+So, we have this table up here that has the region name,
+
+137
+00:09:45,644 --> 00:09:50,615
+and the max sales for a particular rep,
+
+138
+00:09:50,615 --> 00:09:54,086
+and now essentially what we want to do is we want to join that.
+
+139
+00:09:54,086 --> 00:10:02,694
+So, we want to join on the region name equal to the other region name.
+
+140
+00:10:02,695 --> 00:10:10,004
+And we want the max sales in t2
+
+141
+00:10:10,004 --> 00:10:18,033
+to be equal to the total sales in t3.
+
+142
+00:10:18,033 --> 00:10:23,200
+So, if the regions match then we know that we're looking at the right region.
+
+143
+00:10:23,200 --> 00:10:25,645
+And if the max sales is equal to the total sales,
+
+144
+00:10:25,644 --> 00:10:29,350
+then that means that the max sales is equal
+
+145
+00:10:29,350 --> 00:10:34,284
+to the sales that we saw for a particular rep in this first table.
+
+146
+00:10:34,284 --> 00:10:37,360
+So, it'll only pull essentially
+
+147
+00:10:37,360 --> 00:10:43,705
+the sales representatives who have sales that are equal to these amounts,
+
+148
+00:10:43,705 --> 00:10:45,810
+and where they are in this region.
+
+149
+00:10:45,809 --> 00:10:49,689
+So basically, as you can see the Southeast has the highest.
+
+150
+00:10:49,690 --> 00:10:52,790
+So, maybe there is somebody in the Southeast who has this.
+
+151
+00:10:52,789 --> 00:10:55,314
+And if we didn't match on this region here,
+
+152
+00:10:55,315 --> 00:11:01,453
+then potentially there could be multiple with the max sales that we have in the Midwest,
+
+153
+00:11:01,452 --> 00:11:03,366
+but it's not the max for that region,
+
+154
+00:11:03,366 --> 00:11:04,704
+this is the max for that region.
+
+155
+00:11:04,705 --> 00:11:08,960
+So, we can match on both the region and the sales amount.
+
+156
+00:11:08,960 --> 00:11:15,556
+Cool. So, let's go ahead and run this.
+
+157
+00:11:15,556 --> 00:11:18,759
+Okay.
+
+158
+00:11:18,759 --> 00:11:21,480
+So, it looks like we got four results.
+
+159
+00:11:21,480 --> 00:11:23,700
+We have the Southeast, the Northeast,
+
+160
+00:11:23,700 --> 00:11:24,855
+the West, and the Midwest,
+
+161
+00:11:24,855 --> 00:11:25,980
+and nothing else is showing there.
+
+162
+00:11:25,980 --> 00:11:27,500
+So there are those four regions.
+
+163
+00:11:27,500 --> 00:11:30,029
+And here's essentially the max amount of sales
+
+164
+00:11:30,029 --> 00:11:33,789
+by a particular rep and then the name of that representative.
+

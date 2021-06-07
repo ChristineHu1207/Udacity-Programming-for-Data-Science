@@ -1,0 +1,68 @@
+1
+00:00:00,000 --> 00:00:03,270
+So now we know which paper types are most popular and we have
+
+2
+00:00:03,270 --> 00:00:07,089
+a sense of the largest order size we might need to fulfill at any given time.
+
+3
+00:00:07,089 --> 00:00:09,300
+But what's the average order size?
+
+4
+00:00:09,300 --> 00:00:12,000
+What can we expect to see on a regular basis?
+
+5
+00:00:12,000 --> 00:00:14,245
+We'll use the average function which is typed as
+
+6
+00:00:14,244 --> 00:00:19,339
+AVG and has a similar syntax to all of the other aggregation functions.
+
+7
+00:00:19,339 --> 00:00:23,184
+So it looks like that large poster paper order must have been a major outlier
+
+8
+00:00:23,184 --> 00:00:25,179
+because the average poster order is only
+
+9
+00:00:25,179 --> 00:00:27,774
+about a third the size of the average standard order.
+
+10
+00:00:27,774 --> 00:00:30,039
+When you're using the average function,
+
+11
+00:00:30,039 --> 00:00:33,850
+keep in mind that it can only be used on numerical columns.
+
+12
+00:00:33,850 --> 00:00:36,085
+Also, it ignores nulls completely,
+
+13
+00:00:36,085 --> 00:00:38,829
+meaning that rows with null values are not counted in
+
+14
+00:00:38,829 --> 00:00:42,284
+the numerator or the denominator when calculating the average.
+
+15
+00:00:42,284 --> 00:00:44,169
+If you want to treat nulls as zero,
+
+16
+00:00:44,170 --> 00:00:46,030
+you'll need to take a sum and divide it by
+
+17
+00:00:46,030 --> 00:00:49,000
+the count rather than just using the average function.
+

@@ -1,0 +1,84 @@
+1
+00:00:00,000 --> 00:00:03,720
+Imagine yourself as an account manager at Parchin Posey,
+
+2
+00:00:03,720 --> 00:00:06,375
+working with the company's largest accounts.
+
+3
+00:00:06,375 --> 00:00:10,230
+You might want to identify the total sales in US dollars
+
+4
+00:00:10,230 --> 00:00:14,396
+for accounts with over $250,000 in sales,
+
+5
+00:00:14,396 --> 00:00:18,760
+to better understand the proportion of revenue that comes from these large accounts.
+
+6
+00:00:18,760 --> 00:00:20,715
+To get this list,
+
+7
+00:00:20,715 --> 00:00:23,875
+let's first get the sum of sales for each account.
+
+8
+00:00:23,875 --> 00:00:26,700
+We'll order them in descending order so that we can see
+
+9
+00:00:26,700 --> 00:00:30,865
+all the highest value accounts at the top of the result set.
+
+10
+00:00:30,865 --> 00:00:38,170
+Now let's filter down to just the accounts with more than $250,000 in sales.
+
+11
+00:00:52,540 --> 00:00:58,015
+You'll notice that the WHERE clause isn't exactly built for this.
+
+12
+00:00:58,015 --> 00:01:00,180
+The WHERE clause won't work for this because it
+
+13
+00:01:00,180 --> 00:01:03,390
+doesn't allow you to filter on aggregate columns.
+
+14
+00:01:03,390 --> 00:01:07,080
+That's where the HAVING clause comes in.
+
+15
+00:01:23,040 --> 00:01:27,635
+This filters the query down to just the account IDs
+
+16
+00:01:27,635 --> 00:01:32,635
+with more than $250,000 in total sales.
+
+17
+00:01:32,635 --> 00:01:34,850
+One thing to keep in mind is that this is really
+
+18
+00:01:34,850 --> 00:01:38,090
+only useful when grouping by one or more columns.
+
+19
+00:01:38,090 --> 00:01:40,495
+If you're aggregating across the entire dataset,
+
+20
+00:01:40,495 --> 00:01:42,725
+the output is only one line anyway,
+
+21
+00:01:42,725 --> 00:01:45,000
+so there's no need to filter beyond that.
+

@@ -1,0 +1,73 @@
+1
+00:00:00,067 --> 00:00:02,867
+A função "ntile" permite
+observar a porcentagem
+
+2
+00:00:02,900 --> 00:00:06,033
+ou qualquer subdivisão
+de uma linha específica.
+
+3
+00:00:06,067 --> 00:00:07,400
+Como vemos aqui,
+
+4
+00:00:07,433 --> 00:00:09,567
+o número especificado
+nessa função
+
+5
+00:00:09,600 --> 00:00:13,167
+é o número de partes
+pelo qual dividiremos a janela.
+
+6
+00:00:13,200 --> 00:00:16,867
+100 significa a porcentagem,
+5 significa quintos
+
+7
+00:00:16,900 --> 00:00:18,700
+e 4 significa quartos.
+
+8
+00:00:18,733 --> 00:00:22,000
+Neste caso, "order by"
+determina qual coluna utilizar
+
+9
+00:00:22,067 --> 00:00:25,867
+a fim de determinar os quartos,
+utilizando a quantidade padrão.
+
+10
+00:00:27,733 --> 00:00:31,000
+Para cada linha,
+a função "ntile:4"
+
+11
+00:00:31,033 --> 00:00:33,933
+observará o valor
+da quantidade padrão
+
+12
+00:00:34,000 --> 00:00:36,533
+comparado às outras linhas
+na janela,
+
+13
+00:00:36,567 --> 00:00:40,133
+e imprimirá o quarto
+no qual o valor se encaixa.
+
+14
+00:00:40,167 --> 00:00:44,100
+Uma quantidade padrão igual a zero
+estaria no primeiro quarto,
+
+15
+00:00:44,133 --> 00:00:47,300
+e o valor mais alto
+ficaria na quarta parte.
+

@@ -1,0 +1,49 @@
+1
+00:00:00,734 --> 00:00:05,000
+A sintaxe para "min" e "max"
+é semelhante à de "sum" e "count".
+
+2
+00:00:05,033 --> 00:00:06,701
+Não deveria surpreender
+
+3
+00:00:06,734 --> 00:00:09,100
+que o mínimo para cada tipo
+de papel seja zero.
+
+4
+00:00:09,133 --> 00:00:12,234
+Alguns clientes só pedem
+um ou dois tipos de papel.
+
+5
+00:00:12,834 --> 00:00:15,400
+O surpreendente é que
+o maior pedido individual
+
+6
+00:00:15,434 --> 00:00:20,367
+seja de papel pôster, apesar de
+ele ser o menos popular em geral.
+
+7
+00:00:20,400 --> 00:00:22,434
+Há implicações
+importantes aqui.
+
+8
+00:00:22,467 --> 00:00:24,434
+Mesmo não sendo
+o item mais popular,
+
+9
+00:00:24,467 --> 00:00:27,467
+a Parch & Posey pode querer
+produzir papel pôster o bastante
+
+10
+00:00:27,501 --> 00:00:30,267
+para atender grandes pedidos
+a qualquer momento.
+

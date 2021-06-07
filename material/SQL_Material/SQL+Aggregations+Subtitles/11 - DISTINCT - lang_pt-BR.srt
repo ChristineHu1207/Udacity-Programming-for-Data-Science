@@ -1,0 +1,81 @@
+1
+00:00:00,834 --> 00:00:03,067
+Você pode pensar em "distinct"
+desta forma:
+
+2
+00:00:03,100 --> 00:00:04,934
+e você quer agrupar
+algumas colunas,
+
+3
+00:00:04,968 --> 00:00:07,801
+mas não necessariamente
+incluir quaisquer agregações,
+
+4
+00:00:07,834 --> 00:00:10,133
+pode usar "distinct".
+
+5
+00:00:10,167 --> 00:00:13,133
+Como exemplo, vamos revisitar
+a conta de eventos
+
+6
+00:00:13,167 --> 00:00:16,801
+por canal por conta que vimos
+no segmento "group by".
+
+7
+00:00:17,968 --> 00:00:20,868
+Veja a conta das linhas:
+1.509.
+
+8
+00:00:20,901 --> 00:00:24,367
+Se tirarmos a coluna de eventos,
+vemos que a consulta resultante
+
+9
+00:00:24,400 --> 00:00:26,334
+nos dá basicamente
+os mesmos resultados
+
+10
+00:00:26,367 --> 00:00:28,234
+com a mesma conta de linhas.
+
+11
+00:00:29,834 --> 00:00:32,667
+Se fizermos novamente a consulta
+usando "distinct",
+
+12
+00:00:32,701 --> 00:00:34,801
+os resultados serão os mesmos.
+
+13
+00:00:41,200 --> 00:00:44,734
+É claro que não incluem mais "count"
+porque a removemos
+
+14
+00:00:44,767 --> 00:00:46,501
+da nossa declaração "select".
+
+15
+00:00:46,567 --> 00:00:48,667
+Por não estar mais
+na declaração "select",
+
+16
+00:00:48,701 --> 00:00:51,234
+e como não estamos mais
+fazendo uma agregação,
+
+17
+00:00:51,267 --> 00:00:53,167
+não precisamos da cláusula
+"group by".
+

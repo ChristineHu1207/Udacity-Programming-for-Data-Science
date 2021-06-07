@@ -1,0 +1,84 @@
+1
+00:00:00,000 --> 00:00:02,910
+As a sales operations manager at Parch & Posey,
+
+2
+00:00:02,910 --> 00:00:06,675
+classifying orders into general groups is a helpful exercise.
+
+3
+00:00:06,674 --> 00:00:11,219
+But it's much more useful if you can let it count up all the orders in each group.
+
+4
+00:00:11,220 --> 00:00:14,475
+Aggregating based on these new categories will make it
+
+5
+00:00:14,474 --> 00:00:18,695
+easier to report back to company leaders and take action.
+
+6
+00:00:18,695 --> 00:00:20,429
+The easiest way to count all the members of
+
+7
+00:00:20,429 --> 00:00:24,480
+a group is to create a column that groups the way you want it to,
+
+8
+00:00:24,480 --> 00:00:28,214
+then create another column to count by that group.
+
+9
+00:00:28,214 --> 00:00:35,162
+Here, we're using CASE to group orders into those with total quantity sold over 500,
+
+10
+00:00:35,162 --> 00:00:38,959
+and those with 500 or less.
+
+11
+00:00:38,960 --> 00:00:41,225
+This query is an excellent place to use numbers
+
+12
+00:00:41,225 --> 00:00:44,210
+instead of full column calculation in the GROUP BY clause,
+
+13
+00:00:44,210 --> 00:00:45,890
+because repeating the CASE statement in
+
+14
+00:00:45,890 --> 00:00:48,935
+the GROUP BY would make the query obnoxiously long.
+
+15
+00:00:48,935 --> 00:00:50,330
+Now, you might be thinking,
+
+16
+00:00:50,329 --> 00:00:54,769
+why wouldn't I just use a WHERE clause to filter out rows I don't want to count?
+
+17
+00:00:54,770 --> 00:00:56,475
+You could do that,
+
+18
+00:00:56,475 --> 00:01:00,030
+and it would look like this.
+
+19
+00:01:08,200 --> 00:01:14,996
+Unfortunately, using the WHERE clause only allows you to count one condition at a time.
+
+20
+00:01:14,996 --> 00:01:17,905
+This would be tedious if we had a number of different cases.
+
+21
+00:01:17,905 --> 00:01:20,000
+We would need a separate query for each one.
+

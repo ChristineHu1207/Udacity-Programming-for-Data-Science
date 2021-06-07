@@ -1,0 +1,40 @@
+1
+00:00:00,000 --> 00:00:04,040
+This lesson introduces one of the most powerful concepts in
+
+2
+00:00:04,040 --> 00:00:07,751
+SQL data analysis, the window function.
+
+3
+00:00:07,751 --> 00:00:12,315
+It allows you to compare one row to another without doing any joints.
+
+4
+00:00:12,315 --> 00:00:16,480
+That means you want to do simple things like create a running total,
+
+5
+00:00:16,480 --> 00:00:18,820
+as well as tricky things like determine whether
+
+6
+00:00:18,820 --> 00:00:21,140
+one row was greater than the previous row,
+
+7
+00:00:21,140 --> 00:00:23,915
+and classify it based on your finding.
+
+8
+00:00:23,915 --> 00:00:27,095
+Most people SQL education ends before this.
+
+9
+00:00:27,095 --> 00:00:30,400
+So, adding these skills to your toolkit and learning to use them in a number
+
+10
+00:00:30,400 --> 00:00:34,030
+of different situations will make you an extremely effective analyst.
+

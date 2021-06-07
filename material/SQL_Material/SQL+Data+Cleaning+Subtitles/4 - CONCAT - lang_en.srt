@@ -1,0 +1,24 @@
+1
+00:00:00,000 --> 00:00:05,294
+Now let's say we want to combine first and last names into a single full name column.
+
+2
+00:00:05,294 --> 00:00:09,449
+You can combine strings from several columns using CONCAT.
+
+3
+00:00:09,449 --> 00:00:13,919
+Simply order the values you want to concatenate and separate them with commas.
+
+4
+00:00:13,919 --> 00:00:15,839
+If you want a hard code values,
+
+5
+00:00:15,839 --> 00:00:21,740
+enclose them in single quotes the way that I'm doing with this space.
+
+6
+00:00:21,980 --> 00:00:30,289
+Alternatively, you can use two pipe characters to perform the same concatenation.
+

@@ -1,0 +1,56 @@
+1
+00:00:00,000 --> 00:00:02,084
+Before we dive into aggregation,
+
+2
+00:00:02,084 --> 00:00:05,195
+we need to cover one more concept, Nulls.
+
+3
+00:00:05,195 --> 00:00:07,145
+Null means no data.
+
+4
+00:00:07,144 --> 00:00:09,779
+It's different from a zero or a space.
+
+5
+00:00:09,779 --> 00:00:12,794
+And there's a good reason. From a business perspective,
+
+6
+00:00:12,794 --> 00:00:16,184
+for Parch & Posey a zero means that no paper was sold,
+
+7
+00:00:16,184 --> 00:00:19,019
+which could mean that a sale was attempted but not made.
+
+8
+00:00:19,019 --> 00:00:22,689
+A null could mean no sale was even attempted.
+
+9
+00:00:22,690 --> 00:00:25,640
+And that's a pretty meaningful difference.
+
+10
+00:00:25,640 --> 00:00:27,815
+Those could be the result of any number of things,
+
+11
+00:00:27,815 --> 00:00:30,300
+they can be part of the data design itself or
+
+12
+00:00:30,300 --> 00:00:33,295
+they can simply be the result of poorly locked data.
+
+13
+00:00:33,295 --> 00:00:35,340
+Regardless, it's important to understand
+
+14
+00:00:35,340 --> 00:00:38,140
+what nulls mean and to know how to work with them.
+

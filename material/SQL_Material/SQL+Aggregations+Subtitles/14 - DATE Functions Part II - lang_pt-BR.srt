@@ -1,0 +1,263 @@
+1
+00:00:01,267 --> 00:00:04,300
+Para agrupar por dia, precisamos
+ajustar todos os horários
+
+2
+00:00:04,334 --> 00:00:06,528
+de 1/4/2017
+
+3
+00:00:06,733 --> 00:00:11,528
+para ler 2017/04/01,
+
+4
+00:00:11,734 --> 00:00:14,534
+0h00min00s.
+
+5
+00:00:15,801 --> 00:00:19,200
+Assim, quando agruparmos
+por data, vemos cada evento
+
+6
+00:00:19,234 --> 00:00:22,601
+ocorrido em todas as horas,
+minutos e segundos de 1/4.
+
+7
+00:00:22,634 --> 00:00:25,634
+Todos ficarão juntos
+no mesmo agrupamento.
+
+8
+00:00:27,400 --> 00:00:30,133
+Podemos fazer isso
+usando a função "Date Trunc".
+
+9
+00:00:31,067 --> 00:00:35,167
+Vamos começar agrupando
+por ocorrência, sem diminuição.
+
+10
+00:00:36,467 --> 00:00:39,567
+Como podemos ver,
+isso não nos ajuda em nada.
+
+11
+00:00:40,033 --> 00:00:42,400
+Se substituirmos cada instância
+de ocorrência
+
+12
+00:00:42,434 --> 00:00:43,968
+por uma versão diminuída,
+
+13
+00:00:44,000 --> 00:00:47,501
+veremos a soma das quantidades
+de papel padrão por dia.
+
+14
+00:00:53,767 --> 00:00:55,667
+É importante agrupar
+pela mesma métrica
+
+15
+00:00:55,701 --> 00:00:59,834
+incluída na declaração "select"
+para obter resultados consistentes.
+
+16
+00:00:59,868 --> 00:01:02,968
+Em alguns bancos de dados,
+é possível agrupar por um ano
+
+17
+00:01:03,000 --> 00:01:06,200
+mas diminuir por dia
+na declaração "select".
+
+18
+00:01:06,234 --> 00:01:08,601
+A maioria das pessoas
+só faz isso por acidente,
+
+19
+00:01:08,634 --> 00:01:11,901
+pois os resultados fornecidos
+são confusos e, em muitos casos,
+
+20
+00:01:11,934 --> 00:01:14,834
+incorretos para o tipo de pergunta
+que se tenta responder.
+
+21
+00:01:14,868 --> 00:01:17,501
+A forma mais fácil de assegurar
+o agrupamento correto
+
+22
+00:01:17,534 --> 00:01:21,300
+é usar colunas numéricas em vez
+de reescrever as funções exatas.
+
+23
+00:01:22,434 --> 00:01:25,434
+"Date trunc" pode ser usado
+para agregar níveis precisos,
+
+24
+00:01:25,467 --> 00:01:26,567
+como segundos.
+
+25
+00:01:26,601 --> 00:01:28,934
+Pode ser útil se você trabalha
+com logs de servidor
+
+26
+00:01:28,968 --> 00:01:31,234
+ou muitos eventos ocorrendo
+em um dado segundo.
+
+27
+00:01:31,267 --> 00:01:34,167
+Mas, na maior parte do tempo,
+ele agrega intervalos
+
+28
+00:01:34,200 --> 00:01:36,334
+que fazem sentido
+da perspectiva comercial,
+
+29
+00:01:36,367 --> 00:01:39,701
+como dia, semana, mês,
+trimestre e ano.
+
+30
+00:01:39,734 --> 00:01:42,234
+Aqui podemos ver
+diminuições diferentes.
+
+31
+00:01:42,267 --> 00:01:45,667
+Observe que,
+se o nosso mês ou dia for 01,
+
+32
+00:01:45,701 --> 00:01:49,067
+não há alteração nos valores,
+como você pode ver.
+
+33
+00:01:51,534 --> 00:01:55,067
+Há casos em que você pode
+pegar só certa parte da data,
+
+34
+00:01:55,100 --> 00:01:57,701
+por exemplo, se quiser saber
+em que dia da semana
+
+35
+00:01:57,734 --> 00:02:00,033
+o site da Parch & Posey
+tem mais tráfego,
+
+36
+00:02:00,067 --> 00:02:02,033
+é melhor não usar
+"Date Trunc".
+
+37
+00:02:02,067 --> 00:02:05,901
+Para descobrir o dia da semana,
+você deve usar "Date part".
+
+38
+00:02:05,934 --> 00:02:08,200
+Em "Date part", você vê
+somente a parte do dia
+
+39
+00:02:08,234 --> 00:02:10,000
+na qual tem interesse.
+
+40
+00:02:10,033 --> 00:02:12,601
+Observe que não importa o ano.
+Um "Date part"
+
+41
+00:02:12,634 --> 00:02:16,234
+forneceria o mesmo mês para
+um evento ocorrido em abril de 2016
+
+42
+00:02:16,267 --> 00:02:18,234
+e abril de 2017,
+
+43
+00:02:18,267 --> 00:02:21,467
+enquanto o "Date trunc"
+iria diferenciar tais eventos.
+
+44
+00:02:21,501 --> 00:02:24,734
+Vamos explorar esse exemplo
+usando dados da Parch & Posey.
+
+45
+00:02:24,767 --> 00:02:27,033
+Em que dia da semana
+há mais vendas?
+
+46
+00:02:27,067 --> 00:02:30,334
+Vamos começar entendendo
+o dia da semana para cada um.
+
+47
+00:02:30,367 --> 00:02:34,300
+"DOW" significa "dia da semana"
+e devolve valores
+
+48
+00:02:34,334 --> 00:02:38,234
+de zero a seis, no qual o zero
+é domingo e seis é sábado.
+
+49
+00:02:38,267 --> 00:02:41,133
+Agora que temos essa coluna,
+podemos agregar para entender
+
+50
+00:02:41,167 --> 00:02:44,501
+o dia com maior número
+de resmas de papel vendidas.
+
+51
+00:02:44,534 --> 00:02:47,167
+Ou ordená-las pela soma,
+em ordem descendente,
+
+52
+00:02:47,200 --> 00:02:50,801
+para o dia com mais vendas
+ficar no topo dos resultados.
+
+53
+00:02:59,501 --> 00:03:02,434
+Parece que a maior parte do papel
+foi comprada na segunda
+
+54
+00:03:02,467 --> 00:03:04,467
+e que na quinta
+houve menos pedidos.
+

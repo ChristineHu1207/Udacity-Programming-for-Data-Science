@@ -1,0 +1,125 @@
+1
+00:00:00,633 --> 00:00:05,300
+Pode ser útil comparar linhas
+com as anteriores ou posteriores,
+
+2
+00:00:05,333 --> 00:00:09,000
+principalmente quando os dados estão
+em uma ordem que faz sentido.
+
+3
+00:00:09,033 --> 00:00:12,333
+Nesse caso,
+veremos quantos papéis
+
+4
+00:00:12,367 --> 00:00:15,400
+cada conta comprou
+durante todo o período de tempo.
+
+5
+00:00:15,467 --> 00:00:17,833
+Podemos ver isso
+na consulta "inner".
+
+6
+00:00:19,167 --> 00:00:23,433
+Utilizaremos "lag" e "lead"
+para criar colunas
+
+7
+00:00:23,467 --> 00:00:26,367
+que obtêm valores
+de outras linhas.
+
+8
+00:00:26,400 --> 00:00:29,600
+A sintaxe descreve
+de qual coluna obter valores
+
+9
+00:00:29,667 --> 00:00:32,367
+e quantas linhas
+devemos obter.
+
+10
+00:00:33,233 --> 00:00:35,367
+O "lag" busca
+nas linhas anteriores
+
+11
+00:00:35,433 --> 00:00:38,000
+e o "lead", nas seguintes.
+
+12
+00:00:38,867 --> 00:00:42,167
+Como vemos, a primeira linha
+da coluna "lag" é nula,
+
+13
+00:00:42,200 --> 00:00:45,833
+pois não existem linhas anteriores
+das quais obter valores.
+
+14
+00:00:45,867 --> 00:00:49,133
+O valor "lag" da segunda coluna
+é zero.
+
+15
+00:00:49,167 --> 00:00:53,900
+Ele obtém o valor de soma padrão
+da coluna anterior.
+
+16
+00:00:53,933 --> 00:00:56,867
+Isso continua
+durante todo o conjunto de dados.
+
+17
+00:00:56,900 --> 00:00:59,667
+A coluna "lead"
+vai na direção contrária.
+
+18
+00:00:59,700 --> 00:01:02,933
+Isso pode ser útil
+para calcular diferenças
+
+19
+00:01:03,000 --> 00:01:04,900
+entre duas linhas.
+
+20
+00:01:51,933 --> 00:01:55,433
+As novas colunas
+comparam a soma padrão
+
+21
+00:01:55,500 --> 00:01:57,900
+das linhas anteriores
+e posteriores.
+
+22
+00:01:59,333 --> 00:02:00,867
+A diferença "lag"
+
+23
+00:02:01,667 --> 00:02:05,233
+mostra a diferença
+entre a linha atual
+
+24
+00:02:05,267 --> 00:02:07,267
+e a anterior.
+
+25
+00:02:07,300 --> 00:02:08,767
+A diferença "lead"
+
+26
+00:02:08,800 --> 00:02:11,700
+exibe a diferença
+entre a linha atual e a seguinte.
+

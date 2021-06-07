@@ -1,0 +1,20 @@
+1
+00:00:00,000 --> 00:00:04,605
+In this lesson, you learned how to write subqueries and use temp tables.
+
+2
+00:00:04,605 --> 00:00:06,990
+Writing queries like the ones you learned here,
+
+3
+00:00:06,990 --> 00:00:09,810
+allows you to substantially increase the types of problems you can
+
+4
+00:00:09,810 --> 00:00:13,804
+solve and the volume of data you can comfortably work with in SQL.
+
+5
+00:00:13,804 --> 00:00:19,000
+In the next lessons, you'll learn a few tools to handle more directed use cases.
+

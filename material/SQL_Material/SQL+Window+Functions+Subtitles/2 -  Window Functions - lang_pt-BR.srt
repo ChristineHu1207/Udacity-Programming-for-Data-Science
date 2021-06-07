@@ -1,0 +1,155 @@
+1
+00:00:00,733 --> 00:00:02,900
+O exemplo mais prático
+da função de janela
+
+2
+00:00:02,967 --> 00:00:05,033
+é o de "running_total".
+
+3
+00:00:05,067 --> 00:00:10,233
+Por exemplo, vamos calcular quantos
+papéis padrões da Parch & Posey
+
+4
+00:00:10,300 --> 00:00:11,733
+foram vendidos hoje.
+
+5
+00:00:37,767 --> 00:00:40,700
+Vemos que a pesquisa
+cria uma agregação,
+
+6
+00:00:40,733 --> 00:00:43,900
+"running_total",
+sem utilizar agrupamento.
+
+7
+00:00:43,933 --> 00:00:47,133
+Vamos observar a sintaxe
+de como isso funciona.
+
+8
+00:00:47,167 --> 00:00:52,400
+A primeira parte da agregação
+parece como qualquer outra.
+
+9
+00:00:52,433 --> 00:00:55,967
+Adicionar "over"
+designa uma função de janela.
+
+10
+00:00:56,033 --> 00:01:00,833
+Podemos ler a agregação como:
+pegue a soma da quantidade padrão
+
+11
+00:01:00,900 --> 00:01:04,933
+de todas as linhas que levam
+a uma linha específica,
+
+12
+00:01:05,600 --> 00:01:08,067
+por ordem de ocorrência.
+
+13
+00:01:09,033 --> 00:01:14,967
+Imagine que deseja iniciar
+"over running_total" a cada mês.
+
+14
+00:01:15,033 --> 00:01:17,367
+Para restringir a janela
+do conjunto de dados
+
+15
+00:01:17,400 --> 00:01:19,767
+em grupos individuais
+dentro do conjunto,
+
+16
+00:01:19,800 --> 00:01:23,067
+utilizamos
+a função "partition by".
+
+17
+00:01:39,133 --> 00:01:44,933
+Essa consulta agrupa e ordena
+a partir do mês da transação.
+
+18
+00:01:45,000 --> 00:01:48,367
+Cada mês é ordenado
+por ocorrência.
+
+19
+00:01:49,067 --> 00:01:53,533
+O "running_total" soma
+a linha atual e todas as anteriores
+
+20
+00:01:53,600 --> 00:01:55,133
+da quantidade padrão.
+
+21
+00:01:55,733 --> 00:01:58,667
+É isso que acontece
+ao agruparmos com "partition by".
+
+22
+00:02:01,167 --> 00:02:03,467
+Caso você fique perplexo
+pelo "order by",
+
+23
+00:02:04,400 --> 00:02:06,733
+ele simplesmente ordena
+as colunas designadas
+
+24
+00:02:06,767 --> 00:02:09,167
+da mesma forma
+que a expressão "order by" faria,
+
+25
+00:02:09,200 --> 00:02:12,200
+mas trata cada partição
+de forma distinta.
+
+26
+00:02:13,133 --> 00:02:15,467
+E ele também cria
+o "running_total".
+
+27
+00:02:15,500 --> 00:02:19,067
+Sem "order by",
+cada valor seria a soma
+
+28
+00:02:19,100 --> 00:02:23,067
+de todos os valores padrões
+do mês respectivo.
+
+29
+00:02:23,800 --> 00:02:27,100
+É isto que acontece
+quando rodamos a consulta
+
+30
+00:02:27,133 --> 00:02:29,100
+sem "order by".
+
+31
+00:02:35,900 --> 00:02:40,467
+A ordem e a partição serão definidas
+como o que foi referido como janela,
+
+32
+00:02:40,533 --> 00:02:44,467
+um subconjunto ordenado de dados
+resultantes de todos os cálculos.
+

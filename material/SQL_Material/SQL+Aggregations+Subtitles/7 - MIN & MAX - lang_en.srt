@@ -1,0 +1,36 @@
+1
+00:00:00,000 --> 00:00:04,650
+The syntax for min and max is similar to SUM and COUNT.
+
+2
+00:00:04,650 --> 00:00:08,885
+It shouldn't be surprising that the minimum for each paper type is zero.
+
+3
+00:00:08,884 --> 00:00:12,800
+Some customers only order one or two types of paper.
+
+4
+00:00:12,800 --> 00:00:16,515
+What is surprising is that the largest single order is for poster paper,
+
+5
+00:00:16,515 --> 00:00:20,219
+despite the fact that it's the least popular overall.
+
+6
+00:00:20,219 --> 00:00:22,114
+There are important implications here.
+
+7
+00:00:22,114 --> 00:00:24,479
+Even though it's not the most popular item,
+
+8
+00:00:24,480 --> 00:00:27,185
+Parch & Posey may want to produce enough poster paper
+
+9
+00:00:27,184 --> 00:00:30,000
+to be able to fulfill pretty big orders at any given time.
+

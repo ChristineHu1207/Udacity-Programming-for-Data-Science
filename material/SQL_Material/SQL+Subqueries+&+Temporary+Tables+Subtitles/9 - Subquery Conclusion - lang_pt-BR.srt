@@ -1,0 +1,42 @@
+1
+00:00:00,602 --> 00:00:01,734
+Nesta lição,
+
+2
+00:00:01,767 --> 00:00:03,467
+você aprendeu
+a escrever subconsultas
+
+3
+00:00:03,501 --> 00:00:04,934
+e a usar tabelas temporárias.
+
+4
+00:00:04,968 --> 00:00:07,133
+Escrever consultas
+como as que você aprendeu aqui
+
+5
+00:00:07,167 --> 00:00:09,834
+aumenta substancialmente
+os tipos de problemas
+
+6
+00:00:09,868 --> 00:00:11,734
+que você pode resolver
+e o volume de dados
+
+7
+00:00:11,768 --> 00:00:14,434
+com o qual pode trabalhar
+com tranquilidade no SQL.
+
+8
+00:00:14,468 --> 00:00:15,734
+Nas próximas lições,
+
+9
+00:00:15,768 --> 00:00:19,033
+aprenderá ferramentas para lidar
+com casos de uso mais diretos.
+

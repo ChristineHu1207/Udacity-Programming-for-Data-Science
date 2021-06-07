@@ -1,0 +1,24 @@
+1
+00:00:00,020 --> 00:00:03,660
+In this lesson, you've learned how to create windows and
+
+2
+00:00:03,660 --> 00:00:07,440
+use window functions for some pretty advanced analysis.
+
+3
+00:00:07,440 --> 00:00:09,765
+These can take a little practice to really nail,
+
+4
+00:00:09,765 --> 00:00:12,915
+but can be extremely useful as you saw here.
+
+5
+00:00:12,915 --> 00:00:15,720
+In the next lesson, you'll learn to join data in
+
+6
+00:00:15,720 --> 00:00:20,030
+advanced ways for situations where simple inner and left joins won't cut it.
+

@@ -1,0 +1,40 @@
+1
+00:00:00,000 --> 00:00:03,700
+At this point, you've learned all the basics.
+
+2
+00:00:03,700 --> 00:00:05,724
+You understand database structure,
+
+3
+00:00:05,724 --> 00:00:08,314
+and generally know how to access information.
+
+4
+00:00:08,314 --> 00:00:11,570
+You can even do some simple aggregations.
+
+5
+00:00:11,570 --> 00:00:13,830
+There are a few things left to learn that will make you
+
+6
+00:00:13,830 --> 00:00:16,714
+able to solve any problem you're confronted with.
+
+7
+00:00:16,714 --> 00:00:21,655
+In this lesson, you're going to learn how to query from the results of another query.
+
+8
+00:00:21,655 --> 00:00:24,775
+This allows you to build more transformations into your query,
+
+9
+00:00:24,774 --> 00:00:26,559
+organize work more easily,
+
+10
+00:00:26,559 --> 00:00:28,419
+and even make your queries run faster.
+

@@ -1,0 +1,52 @@
+1
+00:00:00,000 --> 00:00:03,395
+Imagine yourself as an operations manager at Parch & Posey.
+
+2
+00:00:03,395 --> 00:00:05,519
+You're trying to do some inventory planning,
+
+3
+00:00:05,519 --> 00:00:08,689
+and you want to know how much of each paper type to produce.
+
+4
+00:00:08,689 --> 00:00:11,515
+A good place to start might be to total up
+
+5
+00:00:11,515 --> 00:00:14,600
+all sales of each paper type and compare them to one another.
+
+6
+00:00:14,599 --> 00:00:16,995
+We'll do this using SUM.
+
+7
+00:00:16,995 --> 00:00:18,730
+It works similarly to COUNT,
+
+8
+00:00:18,730 --> 00:00:22,885
+except that you'll want to specify column names rather than using star.
+
+9
+00:00:22,885 --> 00:00:25,540
+It looks like standard is more popular than
+
+10
+00:00:25,539 --> 00:00:28,884
+both of the non-standard paper types combined.
+
+11
+00:00:28,885 --> 00:00:34,993
+Unlike COUNT, you can only use the SUM function on columns containing numerical values.
+
+12
+00:00:34,993 --> 00:00:37,865
+You don't need to worry too much about the presence of nulls.
+
+13
+00:00:37,865 --> 00:00:40,000
+The SUM function will just treat nulls as zero.
+

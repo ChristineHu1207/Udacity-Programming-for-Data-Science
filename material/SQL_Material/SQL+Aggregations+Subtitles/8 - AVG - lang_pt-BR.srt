@@ -1,0 +1,85 @@
+1
+00:00:00,367 --> 00:00:02,801
+Agora sabemos quais tipos de papel
+são os mais populares.
+
+2
+00:00:02,834 --> 00:00:04,701
+E temos uma ideia
+do maior pedido
+
+3
+00:00:04,734 --> 00:00:07,367
+que podemos querer atender
+a qualquer momento.
+
+4
+00:00:07,400 --> 00:00:09,400
+Mas qual é a média
+de tamanho dos pedidos?
+
+5
+00:00:09,434 --> 00:00:12,033
+O que podemos esperar
+no dia a dia?
+
+6
+00:00:12,067 --> 00:00:16,434
+Vamos usar a função "média",
+"AVG", que tem sintaxe semelhante
+
+7
+00:00:16,467 --> 00:00:19,133
+a todas as outras
+funções agregadoras.
+
+8
+00:00:19,167 --> 00:00:21,267
+Parece que o pedido grande
+de papel pôster
+
+9
+00:00:21,300 --> 00:00:24,801
+pode ter sido incomum,
+pois a média de pedidos para ele
+
+10
+00:00:24,834 --> 00:00:28,267
+é um terço menor do que a média
+de pedidos de papel padrão.
+
+11
+00:00:28,300 --> 00:00:30,069
+Quando for usar
+a função "average",
+
+12
+00:00:30,103 --> 00:00:33,567
+lembre que ela só é usada
+em colunas numéricas.
+
+13
+00:00:33,601 --> 00:00:36,334
+Ela também ignora totalmente
+os nulos,
+
+14
+00:00:36,367 --> 00:00:38,801
+ou seja, linhas sem valores
+não são contadas
+
+15
+00:00:38,834 --> 00:00:42,534
+no numerador ou no denominador
+quando a média é calculada.
+
+16
+00:00:42,567 --> 00:00:45,434
+Para contar nulos como zeros,
+você precisa pegar uma soma
+
+17
+00:00:45,468 --> 00:00:48,801
+e dividi-la pela conta, em vez
+de usar a função "média".
+

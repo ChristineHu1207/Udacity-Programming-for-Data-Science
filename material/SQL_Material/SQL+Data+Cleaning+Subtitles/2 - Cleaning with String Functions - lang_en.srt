@@ -1,0 +1,148 @@
+1
+00:00:00,670 --> 00:00:03,949
+We'll start by looking at this data set.
+
+2
+00:00:03,950 --> 00:00:06,214
+It's a list of leads for Posh and Posy,
+
+3
+00:00:06,214 --> 00:00:09,775
+prospective customers whose business that they might try to win.
+
+4
+00:00:09,775 --> 00:00:13,359
+Please keep in mind that this isn't anybody's real personal information.
+
+5
+00:00:13,359 --> 00:00:17,364
+This was randomly generated for the sake of this lesson.
+
+6
+00:00:17,364 --> 00:00:19,169
+Our goal here is to clean up this data set,
+
+7
+00:00:19,170 --> 00:00:21,665
+to make it more useful for analysis.
+
+8
+00:00:21,664 --> 00:00:27,030
+For text fields, that means making clean groups that will be useful to aggregate across.
+
+9
+00:00:27,030 --> 00:00:30,595
+Let's start by pulling the area code out of the phone number.
+
+10
+00:00:30,594 --> 00:00:34,939
+Since the structure of a phone number in this data set is always the same,
+
+11
+00:00:34,939 --> 00:00:36,839
+we can use that to our advantage.
+
+12
+00:00:36,840 --> 00:00:40,810
+The area code is always the first three characters of a phone number.
+
+13
+00:00:40,810 --> 00:00:44,325
+We can get this using a left function.
+
+14
+00:00:44,325 --> 00:00:49,905
+You can use left to pull certain number of characters from the left side of the string,
+
+15
+00:00:49,905 --> 00:00:52,270
+and present them as a separate string.
+
+16
+00:00:52,270 --> 00:00:54,526
+If we just want the phone number,
+
+17
+00:00:54,526 --> 00:00:58,020
+we can use right, which does the same thing but from the right side.
+
+18
+00:00:58,020 --> 00:00:59,780
+Right works well in this case,
+
+19
+00:00:59,780 --> 00:01:01,670
+because we know that the number of characters will be
+
+20
+00:01:01,670 --> 00:01:04,810
+consistent across the entire phone number field.
+
+21
+00:01:04,810 --> 00:01:06,344
+If it wasn't consistent,
+
+22
+00:01:06,344 --> 00:01:08,924
+it's still possible to pull a string from the right side,
+
+23
+00:01:08,924 --> 00:01:10,799
+in a way that makes sense.
+
+24
+00:01:10,799 --> 00:01:13,804
+The length function returns the length of the string.
+
+25
+00:01:13,805 --> 00:01:19,995
+So, the length of the phone number will always return 12 in this dataset.
+
+26
+00:01:19,995 --> 00:01:23,925
+Since we know that the first three characters will be the area code,
+
+27
+00:01:23,924 --> 00:01:25,859
+and they'll be followed by a dash.
+
+28
+00:01:25,859 --> 00:01:27,670
+So, total of four characters.
+
+29
+00:01:27,670 --> 00:01:35,349
+We could represent the right function as a function of the length.
+
+30
+00:01:40,120 --> 00:01:45,450
+As you can see, the results in the phone number alt field are the
+
+31
+00:01:45,450 --> 00:01:49,790
+same as the result in the phone number only field.
+
+32
+00:01:49,790 --> 00:01:54,415
+This is because, length of the phone number minus four
+
+33
+00:01:54,415 --> 00:02:00,315
+is going to resolve as twelve minus four or eight.
+
+34
+00:02:00,314 --> 00:02:04,405
+Which is the same as the phone number only call.
+
+35
+00:02:04,405 --> 00:02:07,266
+When using functions within other functions,
+
+36
+00:02:07,266 --> 00:02:11,300
+it's important to remember that the innermost functions will be evaluated first,
+
+37
+00:02:11,300 --> 00:02:13,430
+followed by the functions that encapsulate
+

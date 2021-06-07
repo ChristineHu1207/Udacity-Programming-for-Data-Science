@@ -1,0 +1,170 @@
+1
+00:00:01,334 --> 00:00:04,033
+Até agora, neste curso, usamos SQL
+para unir tabelas
+
+2
+00:00:04,067 --> 00:00:06,701
+por meio de direita,
+esquerda e inner joins
+
+3
+00:00:06,734 --> 00:00:10,467
+e filtrar os resultados usando
+as cláusulas "where" e "on".
+
+4
+00:00:10,501 --> 00:00:13,267
+Às vezes é útil observar
+dados row-level.
+
+5
+00:00:13,300 --> 00:00:16,400
+Por exemplo, podemos querer ver
+todos os pedidos individuais
+
+6
+00:00:16,434 --> 00:00:20,367
+de um vendedor para verificar
+seu desempenho em um certo mês.
+
+7
+00:00:20,400 --> 00:00:23,234
+Outras vezes, dados row-level
+são excessivos
+
+8
+00:00:23,267 --> 00:00:26,834
+e, no fim, menos valiosos
+do que dados agregados.
+
+9
+00:00:26,868 --> 00:00:28,133
+Contar todos os pedidos
+
+10
+00:00:28,167 --> 00:00:30,434
+de cada região em cada mês,
+por exemplo,
+
+11
+00:00:30,467 --> 00:00:33,400
+será bem inconveniente
+se observarmos dados row-level.
+
+12
+00:00:33,434 --> 00:00:35,601
+O volume de pedidos de um vendedor
+é baixo o suficiente
+
+13
+00:00:35,634 --> 00:00:37,267
+para observar
+linhas individuais,
+
+14
+00:00:37,300 --> 00:00:40,400
+mas o volume da região inteira
+é alto demais.
+
+15
+00:00:40,434 --> 00:00:43,367
+Em vez disso, um único número
+de pedidos para cada mês
+
+16
+00:00:43,400 --> 00:00:45,334
+será muito melhor.
+
+17
+00:00:45,367 --> 00:00:49,601
+Felizmente, bancos de dados
+são ótimos para agregar dados.
+
+18
+00:00:49,634 --> 00:00:52,000
+A sintaxe SQL
+é fácil de aprender.
+
+19
+00:00:52,033 --> 00:00:55,834
+Se você conhece o Excel,
+os comandos SQL são semelhantes.
+
+20
+00:00:55,868 --> 00:00:59,767
+"Count" conta quantas linhas
+existem em uma certa coluna.
+
+21
+00:00:59,801 --> 00:01:03,367
+"Sum" soma todos os valores
+em uma determinada coluna.
+
+22
+00:01:04,234 --> 00:01:07,200
+"Min and max" devolvem os valores
+mais altos e mais baixos
+
+23
+00:01:07,234 --> 00:01:09,234
+em uma coluna em especial.
+
+24
+00:01:09,267 --> 00:01:14,400
+E "average" calcula a média de todos
+os valores em uma dada coluna.
+
+25
+00:01:14,434 --> 00:01:17,934
+Essas funções servem para colunas,
+não para linhas,
+
+26
+00:01:17,968 --> 00:01:20,968
+então você pode, por exemplo,
+somar todas as quantidades de papel
+
+27
+00:01:21,000 --> 00:01:22,367
+já entregues.
+
+28
+00:01:22,400 --> 00:01:25,467
+Em vez de obter resultados
+de milhares de linhas,
+
+29
+00:01:25,501 --> 00:01:28,300
+você recebe uma só linha
+com a resposta.
+
+30
+00:01:28,334 --> 00:01:31,200
+Na prática, você se verá usando
+saídas de row-level
+
+31
+00:01:31,234 --> 00:01:33,868
+no trabalho exploratório inicial
+de busca no banco de dados
+
+32
+00:01:33,901 --> 00:01:35,901
+para melhor entendê-los.
+
+33
+00:01:35,934 --> 00:01:37,934
+Ao entender
+a aparência dos dados
+
+34
+00:01:37,968 --> 00:01:39,901
+e buscar respostas
+para suas perguntas,
+
+35
+00:01:39,934 --> 00:01:41,901
+os agregadores se tornam
+mais úteis.
+

@@ -1,0 +1,101 @@
+1
+00:00:00,469 --> 00:00:02,000
+Um problema
+com as subconsultas
+
+2
+00:00:02,034 --> 00:00:03,300
+é que elas podem tornar
+suas consultas
+
+3
+00:00:03,334 --> 00:00:04,967
+longas e difíceis de ler.
+
+4
+00:00:05,667 --> 00:00:08,333
+Expressões de tabelas comuns
+ou CTEs
+
+5
+00:00:08,833 --> 00:00:11,333
+podem ajudar a quebrar a consulta
+em componentes separados,
+
+6
+00:00:11,367 --> 00:00:14,200
+para que a lógica da sua consulta
+tenha uma leitura fácil.
+
+7
+00:00:14,533 --> 00:00:16,867
+Você pode ler a lógica
+das subconsultas sozinhas
+
+8
+00:00:16,901 --> 00:00:20,067
+e depois ler facilmente
+a lógica das consultas finais.
+
+9
+00:00:21,133 --> 00:00:23,533
+Vamos voltar ao exemplo
+em que encontramos
+
+10
+00:00:23,567 --> 00:00:27,267
+a média de eventos por dia
+em cada canal de marketing.
+
+11
+00:00:30,067 --> 00:00:31,367
+Vamos transformar
+a subconsulta
+
+12
+00:00:31,401 --> 00:00:33,667
+em sua própria expressão
+de tabela comum,
+
+13
+00:00:33,701 --> 00:00:36,200
+que criaremos usando
+o comando "with".
+
+14
+00:01:05,867 --> 00:01:09,033
+Aqui estamos apenas definindo
+essa expressão de tabela comum,
+
+15
+00:01:09,067 --> 00:01:12,033
+mas podemos, teoricamente,
+escrever tantas quanto quisermos.
+
+16
+00:01:12,567 --> 00:01:15,067
+Precisamos definir quaisquer
+expressões de tabela comuns
+
+17
+00:01:15,101 --> 00:01:16,467
+no início da consulta,
+
+18
+00:01:16,501 --> 00:01:19,767
+para usá-las na consulta final
+na parte inferior.
+
+19
+00:01:20,233 --> 00:01:22,600
+Cada expressão de tabela comum
+recebe um codinome,
+
+20
+00:01:23,033 --> 00:01:24,367
+assim como uma subconsulta.
+
+21
+00:01:25,067 --> 00:01:27,033
+Aqui o codinome é "Events".
+

@@ -1,0 +1,165 @@
+1
+00:00:00,567 --> 00:00:03,133
+O lugar mais fácil
+para utilizar funções de janela
+
+2
+00:00:03,200 --> 00:00:06,867
+é nas funções que só contam
+e não agregam.
+
+3
+00:00:07,633 --> 00:00:10,400
+"Row_number"
+faz exatamente o que parece:
+
+4
+00:00:10,467 --> 00:00:14,267
+ele exibe o número de uma linha
+dentro da janela definida.
+
+5
+00:00:14,333 --> 00:00:17,733
+Ele começa no 1 e enumera
+as linhas de acordo com o "order by"
+
+6
+00:00:17,767 --> 00:00:19,967
+da instrução de janela.
+
+7
+00:00:20,000 --> 00:00:24,733
+"Row_number" não exige especificar
+uma variável dentro do parêntese.
+
+8
+00:00:27,800 --> 00:00:30,433
+Aqui estamos ordenando
+pelo campo de ID,
+
+9
+00:00:30,500 --> 00:00:32,767
+que aumenta em um
+a cada linha.
+
+10
+00:00:32,833 --> 00:00:37,400
+Os campos de ID e de número de linha
+têm sempre o mesmo valor.
+
+11
+00:00:38,533 --> 00:00:40,633
+Se ordenarmos as linhas
+por "ocurred_at",
+
+12
+00:00:40,667 --> 00:00:42,233
+a ordem será diferente,
+
+13
+00:00:42,300 --> 00:00:46,167
+e a coluna "row_num" será
+associada de forma diferente.
+
+14
+00:00:46,200 --> 00:00:50,000
+Vemos que os números das linhas
+não combinam mais com os IDs.
+
+15
+00:00:50,067 --> 00:00:51,867
+Com a expressão
+"partitioned by",
+
+16
+00:00:51,900 --> 00:00:55,933
+podemos começar a contagem em um
+em cada partição.
+
+17
+00:00:55,967 --> 00:00:59,333
+Vamos separar por ID de conta
+para ver como fica.
+
+18
+00:01:02,200 --> 00:01:05,767
+Vemos o número da linha
+de cada ID de conta,
+
+19
+00:01:05,800 --> 00:01:09,600
+sendo que a linha 1
+é a primeira ordem que ocorreu.
+
+20
+00:01:09,633 --> 00:01:13,600
+Existe outra função, "rank",
+que faz algo parecido.
+
+21
+00:01:13,633 --> 00:01:15,267
+Vejamos.
+
+22
+00:01:20,500 --> 00:01:24,100
+Embora pareça igual,
+há uma diferença sutil.
+
+23
+00:01:24,167 --> 00:01:27,833
+Se duas linhas seguidas tiverem
+o mesmo valor em "ocurred_at",
+
+24
+00:01:27,900 --> 00:01:29,667
+elas terão o mesmo "rank",
+
+25
+00:01:29,700 --> 00:01:33,167
+sendo que o número de linhas
+atribui valores diferentes.
+
+26
+00:01:33,233 --> 00:01:35,467
+Veremos isso melhor
+se truncarmos os dados
+
+27
+00:01:35,500 --> 00:01:37,533
+do campo "ocurred_at"
+por mês.
+
+28
+00:02:01,367 --> 00:02:05,400
+Como vemos, entradas com o mesmo mês
+terão o mesmo "rank",
+
+29
+00:02:05,433 --> 00:02:08,833
+e a coluna "rank" pula valores
+para resolver o caso.
+
+30
+00:02:09,667 --> 00:02:12,233
+Há uma função parecida,
+"dense rank",
+
+31
+00:02:12,267 --> 00:02:14,767
+que não pula valores
+após associar várias linhas
+
+32
+00:02:14,833 --> 00:02:16,533
+com o mesmo "rank".
+
+33
+00:02:16,600 --> 00:02:20,000
+Notou como isso pulou
+do "rank" 2 para o 4?
+
+34
+00:02:20,033 --> 00:02:22,933
+Com "dense rank",
+ele vai do 2 para o 3.
+

@@ -1,0 +1,116 @@
+1
+00:00:00,767 --> 00:00:03,867
+Imagine-se como gerente de contas
+da Parch & Posey,
+
+2
+00:00:03,900 --> 00:00:06,633
+trabalhando com as maiores
+contas da empresa.
+
+3
+00:00:06,667 --> 00:00:08,933
+Você pode querer identificar
+o total de vendas
+
+4
+00:00:08,967 --> 00:00:10,433
+em dólares americanos,
+
+5
+00:00:10,467 --> 00:00:14,300
+para contas acima
+de US$ 250 mil em vendas,
+
+6
+00:00:14,333 --> 00:00:18,667
+para entender melhor a proporção
+da receita vinda de grandes contas.
+
+7
+00:00:19,633 --> 00:00:21,300
+Para obter essa lista,
+
+8
+00:00:21,333 --> 00:00:24,033
+vamos pegar primeiro
+a soma de vendas de cada conta
+
+9
+00:00:24,067 --> 00:00:25,767
+e colocá-las
+em ordem descendente
+
+10
+00:00:25,800 --> 00:00:28,533
+para vermos todas as contas
+de valor mais alto
+
+11
+00:00:28,567 --> 00:00:30,800
+no topo do conjunto
+de resultados.
+
+12
+00:00:30,833 --> 00:00:33,067
+Agora vamos filtrar
+somente contas
+
+13
+00:00:33,100 --> 00:00:36,300
+com mais de US$ 250 mil
+em vendas.
+
+14
+00:00:54,367 --> 00:00:57,900
+Você verá que a cláusula "where"
+não foi feita exatamente para isso.
+
+15
+00:00:57,933 --> 00:01:00,767
+Ela não funciona aqui
+porque não permite
+
+16
+00:01:00,800 --> 00:01:03,300
+que se filtre
+em colunas agregadas.
+
+17
+00:01:03,333 --> 00:01:05,833
+É aí que entra
+a cláusula "having".
+
+18
+00:01:24,967 --> 00:01:27,900
+Ela filtra a consulta para mostrar
+apenas IDs de contas
+
+19
+00:01:27,933 --> 00:01:31,233
+com mais de US$ 250 mil
+em vendas totais.
+
+20
+00:01:32,600 --> 00:01:36,300
+Um lembrete: isso só é útil
+em agrupamentos
+
+21
+00:01:36,333 --> 00:01:38,167
+de uma ou mais colunas.
+
+22
+00:01:38,200 --> 00:01:40,800
+Se estiver agrupando
+todo o conjunto de dados,
+
+23
+00:01:40,833 --> 00:01:43,533
+a saída terá apenas uma linha,
+então não é necessário
+
+24
+00:01:43,567 --> 00:01:44,833
+filtrar além disso.
+

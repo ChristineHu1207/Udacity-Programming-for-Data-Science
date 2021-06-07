@@ -1,0 +1,139 @@
+1
+00:00:01,167 --> 00:00:03,334
+Para sentir como funcionam
+os nulos,
+
+2
+00:00:03,367 --> 00:00:06,033
+vamos ver um conjunto
+de registros da tabela de contas
+
+3
+00:00:06,100 --> 00:00:10,300
+com IDs entre 1.500 e 1.600.
+
+4
+00:00:11,834 --> 00:00:16,000
+Vemos que o o PDC primário,
+que significa "ponto de contato",
+
+5
+00:00:16,033 --> 00:00:18,868
+está vazio
+para a conta da Intel.
+
+6
+00:00:18,901 --> 00:00:21,567
+Pode ser um simples erro
+nos dados,
+
+7
+00:00:21,634 --> 00:00:25,067
+talvez um ponto de contato apagado
+por acidente em algum momento,
+
+8
+00:00:25,133 --> 00:00:27,367
+ou pode ser que o PDC
+da Parch & Posey
+
+9
+00:00:27,400 --> 00:00:28,834
+tenha saído da empresa
+
+10
+00:00:28,868 --> 00:00:31,701
+e ainda não exista um novo
+ponto de contato para a conta.
+
+11
+00:00:31,734 --> 00:00:35,000
+De qualquer modo, não há dados
+nessa célula em particular.
+
+12
+00:00:35,033 --> 00:00:36,767
+A célula é nula.
+
+13
+00:00:36,801 --> 00:00:39,901
+Imagine-se como um gerente
+de vendas da Parch & Posey.
+
+14
+00:00:39,934 --> 00:00:42,901
+Você pode querer saber
+todas as contas cujo PDC primário
+
+15
+00:00:42,968 --> 00:00:44,300
+seja nulo.
+
+16
+00:00:44,334 --> 00:00:45,901
+Se você não tem um PDC,
+
+17
+00:00:45,934 --> 00:00:50,033
+pode ser que você não consiga
+manter o cliente por muito tempo.
+
+18
+00:00:50,067 --> 00:00:51,934
+Para encontrar
+todas essas contas,
+
+19
+00:00:51,968 --> 00:00:55,167
+você deve usar uma sintaxe especial
+na cláusula "WHERE".
+
+20
+00:00:59,234 --> 00:01:02,634
+Acontece que há algumas contas
+sem pontos de contato.
+
+21
+00:01:02,667 --> 00:01:04,901
+Então, o que os nulos
+têm de especial
+
+22
+00:01:04,968 --> 00:01:09,067
+é que você deve escrever "is null"
+em vez de "equals null".
+
+23
+00:01:13,968 --> 00:01:17,033
+A razão para isso não funcionar
+é que "nulo" não é um valor,
+
+24
+00:01:17,067 --> 00:01:19,200
+mas uma propriedade do dado.
+
+25
+00:01:19,234 --> 00:01:23,501
+É diferente de zero
+ou de um espaço, que são valores.
+
+26
+00:01:23,534 --> 00:01:26,167
+Para achar o inverso
+dos resultados anteriores,
+
+27
+00:01:26,200 --> 00:01:28,734
+você pode usar a sintaxe
+"is not nullL".
+
+28
+00:01:30,033 --> 00:01:32,667
+Como podemos observar,
+são mostradas todas as linhas
+
+29
+00:01:32,701 --> 00:01:35,701
+nas quais há valores
+na coluna PDC primário.
+

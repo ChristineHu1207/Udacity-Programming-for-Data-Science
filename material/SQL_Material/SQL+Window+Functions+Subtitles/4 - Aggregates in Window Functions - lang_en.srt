@@ -1,0 +1,124 @@
+1
+00:00:00,000 --> 00:00:03,350
+Now that you're a little more familiar with how Window functions work,
+
+2
+00:00:03,350 --> 00:00:05,360
+let's dig into the real power.
+
+3
+00:00:05,360 --> 00:00:07,107
+When using Windows functions,
+
+4
+00:00:07,107 --> 00:00:11,540
+you can apply the same aggregates that you would under normal circumstances: sum,
+
+5
+00:00:11,540 --> 00:00:14,720
+count, average, min and max.
+
+6
+00:00:14,720 --> 00:00:18,650
+The easiest way to understand how these work is to run them all at once.
+
+7
+00:00:18,650 --> 00:00:21,970
+We'll just add them to this example from earlier.
+
+8
+00:00:21,970 --> 00:00:24,800
+Let's run through each of these one at a time.
+
+9
+00:00:24,800 --> 00:00:26,810
+First, let's look at sum.
+
+10
+00:00:26,810 --> 00:00:29,210
+It's creating a running total.
+
+11
+00:00:29,210 --> 00:00:35,000
+The first row is the same as the standard quantity value 123.
+
+12
+00:00:35,000 --> 00:00:37,655
+The second and third rows have the same value
+
+13
+00:00:37,655 --> 00:00:40,940
+because they're ordered by the truncated month of occurred at.
+
+14
+00:00:40,940 --> 00:00:45,215
+Since rows two and three have the same month, they're grouped together.
+
+15
+00:00:45,215 --> 00:00:48,850
+Similar to the way they're grouped when using rank and dense rank.
+
+16
+00:00:48,850 --> 00:00:53,780
+So the value 819 is equal to 123 from
+
+17
+00:00:53,780 --> 00:00:59,340
+the first row plus 506 and 190 from rows two and three.
+
+18
+00:00:59,340 --> 00:01:03,930
+Rows four and five are also grouped together because they both share the same month.
+
+19
+00:01:03,930 --> 00:01:08,165
+Count shows a running count and is grouped in the same way.
+
+20
+00:01:08,165 --> 00:01:11,635
+You can see that rows two and three both show a count of three.
+
+21
+00:01:11,635 --> 00:01:15,230
+Rows four and five both show a count of five.
+
+22
+00:01:15,230 --> 00:01:17,650
+Average shows a running average,
+
+23
+00:01:17,650 --> 00:01:20,050
+which is really just the running sum divided by
+
+24
+00:01:20,050 --> 00:01:26,315
+the running count: 819 divided by three is 273,
+
+25
+00:01:26,315 --> 00:01:30,635
+1430 divided by five is 286.
+
+26
+00:01:30,635 --> 00:01:34,740
+Min shows the lowest value up to that point in the window.
+
+27
+00:01:34,740 --> 00:01:39,165
+123 is the lowest value until 85 rolls around.
+
+28
+00:01:39,165 --> 00:01:41,615
+That's the lowest value in the entire window.
+
+29
+00:01:41,615 --> 00:01:46,835
+So it stays at 85 until the next window starts with a count 1,011.
+
+30
+00:01:46,835 --> 00:01:49,820
+Max works the same way as min,
+
+31
+00:01:49,820 --> 00:01:54,160
+it always shows the max value up to the given row within the current window.
+

@@ -1,0 +1,64 @@
+1
+00:00:00,620 --> 00:00:04,830
+If we want to segment our data into even more granular chunks,
+
+2
+00:00:04,830 --> 00:00:07,595
+we can group by multiple columns.
+
+3
+00:00:07,594 --> 00:00:10,259
+Imagine yourself as a marketing manager at Parch & Posey,
+
+4
+00:00:10,259 --> 00:00:14,910
+trying to understand how each account interacted with various advertising channels.
+
+5
+00:00:14,910 --> 00:00:18,204
+Which channels are driving traffic and leading to purchases?
+
+6
+00:00:18,204 --> 00:00:21,149
+Are we investing in channels that aren't worth the cost?
+
+7
+00:00:21,149 --> 00:00:24,629
+How much traffic are we obtaining from each channel?
+
+8
+00:00:24,629 --> 00:00:27,599
+One way we might begin to look into these questions,
+
+9
+00:00:27,600 --> 00:00:29,835
+is to count up all of the events for each channel,
+
+10
+00:00:29,835 --> 00:00:33,655
+for each account ID.
+
+11
+00:00:33,655 --> 00:00:37,420
+It looks like the really useful information here is in the events column.
+
+12
+00:00:37,420 --> 00:00:43,135
+Let's reorder this to highlight the highest volume channels for each account.
+
+13
+00:00:43,134 --> 00:00:49,674
+You'll notice that account ID comes before events in the order by clause.
+
+14
+00:00:49,674 --> 00:00:51,227
+Here in the results,
+
+15
+00:00:51,228 --> 00:00:54,145
+you can see that these are ordered first by account ID,
+
+16
+00:00:54,145 --> 00:00:57,000
+then by events within the account ID.
+

@@ -1,0 +1,101 @@
+1
+00:00:00,300 --> 00:00:02,534
+Eis uma lista de pedidos
+do mês passado,
+
+2
+00:00:02,567 --> 00:00:05,367
+supondo que estejamos
+em janeiro de 2017.
+
+3
+00:00:05,400 --> 00:00:07,934
+Estou usando modo
+para executar essas consultas,
+
+4
+00:00:07,968 --> 00:00:11,400
+o que me diz que há 463 linhas
+no meu conjunto de resultados.
+
+5
+00:00:11,434 --> 00:00:14,834
+Ainda assim, você vai precisar
+aprender a contar em SQL,
+
+6
+00:00:14,868 --> 00:00:18,033
+porque você pode usá-la para contar
+de forma muito mais precisa
+
+7
+00:00:18,067 --> 00:00:21,334
+do que apenas contar
+todas as linhas dos resultados.
+
+8
+00:00:21,367 --> 00:00:23,968
+Podemos fazer isso modificando
+a declaração "select"
+
+9
+00:00:24,000 --> 00:00:26,067
+para usar uma função "count".
+
+10
+00:00:26,100 --> 00:00:30,300
+Veja que o resultado é uma linha
+de saída em uma única coluna.
+
+11
+00:00:30,334 --> 00:00:32,033
+E o valor é exatamente o mesmo
+
+12
+00:00:32,067 --> 00:00:34,634
+da contagem de linhas
+que vimos antes.
+
+13
+00:00:34,667 --> 00:00:36,634
+Vamos dar um codinome
+a essa coluna,
+
+14
+00:00:36,667 --> 00:00:38,734
+para que ela fique
+mais fácil de ler.
+
+15
+00:00:39,834 --> 00:00:42,100
+Certo, bem melhor.
+
+16
+00:00:42,133 --> 00:00:43,868
+Como isso funciona?
+
+17
+00:00:43,901 --> 00:00:47,100
+A função "count" nos devolve
+uma conta de todas as linhas
+
+18
+00:00:47,133 --> 00:00:50,400
+que contêm algum dado
+que não seja nulo.
+
+19
+00:00:50,434 --> 00:00:53,934
+É muito incomum haver uma linha
+que seja inteiramente nula.
+
+20
+00:00:53,968 --> 00:00:56,667
+O resultado produzido
+por "count(*)"
+
+21
+00:00:56,701 --> 00:00:59,467
+é tipicamente igual
+ao número de linhas da tabela.
+

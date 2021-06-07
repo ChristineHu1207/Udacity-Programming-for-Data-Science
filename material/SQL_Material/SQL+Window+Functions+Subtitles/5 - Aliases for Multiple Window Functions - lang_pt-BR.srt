@@ -1,0 +1,50 @@
+1
+00:00:00,467 --> 00:00:04,033
+Se pretendemos escrever várias
+funções de janela na mesma consulta,
+
+2
+00:00:04,100 --> 00:00:07,167
+utilizando a mesma janela,
+podemos criar um codinome.
+
+3
+00:00:07,833 --> 00:00:10,100
+Vamos utilizar
+o exemplo anterior
+
+4
+00:00:10,167 --> 00:00:13,733
+no qual testamos
+várias funções de janelas.
+
+5
+00:00:13,767 --> 00:00:16,433
+Definimos o codinome
+com uma cláusula "window",
+
+6
+00:00:16,467 --> 00:00:20,067
+que fica entre as cláusulas
+"where" e "group by".
+
+7
+00:00:20,700 --> 00:00:23,300
+Como esta consulta
+não possui nenhuma delas,
+
+8
+00:00:23,333 --> 00:00:25,667
+colocaremos isso
+depois de "from".
+
+9
+00:01:16,000 --> 00:01:18,767
+Como podemos ver,
+os resultados são os mesmos,
+
+10
+00:01:18,800 --> 00:01:21,067
+mas a consulta
+fica mais fácil de ser lida.
+

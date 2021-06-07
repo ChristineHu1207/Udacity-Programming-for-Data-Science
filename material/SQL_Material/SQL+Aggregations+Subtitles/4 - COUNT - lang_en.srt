@@ -1,0 +1,68 @@
+1
+00:00:00,000 --> 00:00:02,298
+Here's a list of orders in the last month,
+
+2
+00:00:02,298 --> 00:00:05,129
+assuming it's currently January 2017.
+
+3
+00:00:05,129 --> 00:00:07,185
+I'm using mode to run these queries,
+
+4
+00:00:07,184 --> 00:00:11,024
+which tells me that there are 463 rows in my result set.
+
+5
+00:00:11,025 --> 00:00:14,609
+Still, you'll need to learn to count in SQL,
+
+6
+00:00:14,609 --> 00:00:16,230
+because you can use it to count in
+
+7
+00:00:16,230 --> 00:00:21,304
+a much more fine-grained way than simply counting all the rows in a result set.
+
+8
+00:00:21,304 --> 00:00:25,629
+We can do this by modifying our SELECT statement to use a COUNT function.
+
+9
+00:00:25,629 --> 00:00:30,009
+You can see that this returns a single row of output in a single column,
+
+10
+00:00:30,010 --> 00:00:34,320
+and the value is exactly the same as the row count we saw before.
+
+11
+00:00:34,320 --> 00:00:36,115
+Let's give that column an alias,
+
+12
+00:00:36,115 --> 00:00:38,715
+so that it's a little easier to read.
+
+13
+00:00:38,715 --> 00:00:43,495
+Okay, much better. So, how does this work?
+
+14
+00:00:43,494 --> 00:00:50,344
+The COUNT function is returning a count of all the rows that contain some non-null data.
+
+15
+00:00:50,344 --> 00:00:53,810
+It's very unusual to have a row that is entirely null.
+
+16
+00:00:53,810 --> 00:00:55,160
+So, the result produced by a
+
+17
+00:00:55,159 --> 00:00:59,299
+COUNT(*) is typically equal to the number of rows in the table.
+

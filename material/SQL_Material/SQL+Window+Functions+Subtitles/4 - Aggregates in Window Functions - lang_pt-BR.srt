@@ -1,0 +1,163 @@
+1
+00:00:00,533 --> 00:00:03,467
+Agora que mostramos como
+as funções de janela funcionam,
+
+2
+00:00:03,500 --> 00:00:05,433
+vamos falar
+sobre a potência delas.
+
+3
+00:00:05,500 --> 00:00:08,433
+Nas funções de janelas,
+podemos agregar da mesma forma
+
+4
+00:00:08,500 --> 00:00:10,867
+que faríamos
+em circunstâncias normais com:
+
+5
+00:00:10,900 --> 00:00:14,733
+"sum", "count", "average",
+"min" e "max".
+
+6
+00:00:14,767 --> 00:00:18,933
+Para entender como funciona,
+basta rodar todos juntos.
+
+7
+00:00:18,967 --> 00:00:21,833
+Vamos adicioná-los
+ao exemplo anterior.
+
+8
+00:00:21,867 --> 00:00:24,433
+Vejamos um por vez.
+
+9
+00:00:25,367 --> 00:00:29,100
+Vamos observar "sum",
+que cria um total.
+
+10
+00:00:29,167 --> 00:00:34,833
+A primeira linha é a mesma
+do valor padrão: 123.
+
+11
+00:00:34,867 --> 00:00:37,767
+A segunda e a terceira linhas
+possuem os mesmos valores,
+
+12
+00:00:37,833 --> 00:00:41,233
+pois são ordenadas
+pelo mês truncado de "ocurred_at".
+
+13
+00:00:41,300 --> 00:00:43,900
+Como as linhas dois e três
+possuem o mesmo mês,
+
+14
+00:00:43,933 --> 00:00:45,467
+elas são agrupadas.
+
+15
+00:00:45,533 --> 00:00:48,933
+O mesmo acontece com "rank"
+e "dense rank".
+
+16
+00:00:48,967 --> 00:00:54,733
+O valor 819 é igual ao 123
+da primeira linha
+
+17
+00:00:54,767 --> 00:00:59,100
+somado a 506 e 109
+das linhas 2 e 3.
+
+18
+00:00:59,867 --> 00:01:02,100
+As linhas 4 e 5 são agrupadas,
+
+19
+00:01:02,133 --> 00:01:04,467
+pois possuem o mesmo mês.
+
+20
+00:01:04,533 --> 00:01:08,367
+O "count" mostra uma contagem
+e é agrupado da mesma forma.
+
+21
+00:01:08,400 --> 00:01:11,933
+Vemos que as linhas 2 e 3
+possuem "count" igual a 3.
+
+22
+00:01:11,967 --> 00:01:15,500
+As linhas 4 e 5
+possuem "count" igual a 5.
+
+23
+00:01:15,533 --> 00:01:17,733
+O "average" mostra a média,
+
+24
+00:01:17,767 --> 00:01:21,867
+que é a soma
+dividida pela contagem:
+
+25
+00:01:21,933 --> 00:01:25,700
+819 dividido por 3
+é igual a 273.
+
+26
+00:01:27,133 --> 00:01:30,833
+1.430 dividido por 5
+é igual a 286.
+
+27
+00:01:30,867 --> 00:01:34,967
+O "min" exibe o menor valor
+até o momento na janela.
+
+28
+00:01:35,033 --> 00:01:39,267
+123 é o menor valor
+entre as 85 linhas.
+
+29
+00:01:39,300 --> 00:01:41,633
+Esse é o menor valor
+em toda a janela.
+
+30
+00:01:41,700 --> 00:01:44,300
+Ele fica igual a 85
+até a janela seguinte,
+
+31
+00:01:44,367 --> 00:01:46,933
+com a contagem 1.011.
+
+32
+00:01:46,967 --> 00:01:49,400
+O "max" funciona
+da mesma forma.
+
+33
+00:01:49,433 --> 00:01:52,700
+Ele exibe o maior valor
+até a linha dada
+
+34
+00:01:52,733 --> 00:01:54,333
+dentro da janela atual.
+

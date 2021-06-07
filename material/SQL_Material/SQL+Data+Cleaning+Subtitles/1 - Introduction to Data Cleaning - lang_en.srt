@@ -1,0 +1,48 @@
+1
+00:00:00,000 --> 00:00:04,480
+It's often the case, the data isn't structured exactly as you'd like.
+
+2
+00:00:04,480 --> 00:00:06,135
+In a couple of lessons,
+
+3
+00:00:06,134 --> 00:00:07,910
+you worked with the web events table,
+
+4
+00:00:07,910 --> 00:00:12,490
+which contains a refer URL that's well pretty messy.
+
+5
+00:00:12,490 --> 00:00:14,240
+In this lesson, you'll learn a number of
+
+6
+00:00:14,240 --> 00:00:17,344
+techniques for cleaning and reorganizing messy data,
+
+7
+00:00:17,344 --> 00:00:19,750
+so that you can group it the way you want.
+
+8
+00:00:19,750 --> 00:00:21,420
+You'll also learn how to change
+
+9
+00:00:21,420 --> 00:00:25,890
+your columns data type and some tricks for how to manipulate nulls.
+
+10
+00:00:25,890 --> 00:00:27,120
+Put all that together,
+
+11
+00:00:27,120 --> 00:00:29,429
+and you'll have a robust toolset for getting from
+
+12
+00:00:29,429 --> 00:00:32,420
+raw data to something that's very useful for analysis.
+

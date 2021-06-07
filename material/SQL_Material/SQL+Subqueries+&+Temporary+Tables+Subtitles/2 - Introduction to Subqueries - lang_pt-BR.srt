@@ -1,0 +1,47 @@
+1
+00:00:00,668 --> 00:00:01,767
+Algumas consultas,
+
+2
+00:00:01,801 --> 00:00:04,701
+conhecidas como consultas
+internas ou aninhadas,
+
+3
+00:00:04,735 --> 00:00:07,801
+são uma ferramenta para executar
+operações de múltiplas etapas.
+
+4
+00:00:08,068 --> 00:00:09,200
+Por exemplo,
+
+5
+00:00:09,434 --> 00:00:11,901
+vamos colocar o chapéu
+de gerente de marketing de novo.
+
+6
+00:00:12,167 --> 00:00:14,133
+Queremos saber
+quais canais enviam
+
+7
+00:00:14,167 --> 00:00:17,434
+o maior tráfego diário em média
+para a Parch & Posey.
+
+8
+00:00:18,434 --> 00:00:19,567
+Para fazer isso,
+
+9
+00:00:19,601 --> 00:00:22,501
+precisaremos agregar eventos
+por canal, por dia,
+
+10
+00:00:22,968 --> 00:00:26,133
+para então fazer
+uma média deles.
+
